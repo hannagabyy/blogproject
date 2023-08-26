@@ -25,6 +25,7 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
         }else{
             echo("Erro ao tentar logar ! Usuário ou senha incorretos!");
         }
+        debug($_SESSION);die;
     }
 }
 ?>
