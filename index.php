@@ -1,4 +1,5 @@
 <?php
+include('includes.php');
 include('./conexao.php');
 include('./controller/index.controller.php');
 
