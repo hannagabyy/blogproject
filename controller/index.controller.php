@@ -19,13 +19,13 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             }
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['user'] = $usuario['usuario'];
-            
+
+            debug($_SESSION);die;
             header("Location:home.php");
 
         }else{
             echo("Erro ao tentar logar ! Usuário ou senha incorretos!");
         }
-        debug($_SESSION);die;
     }
 }
 ?>
