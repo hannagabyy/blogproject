@@ -1,9 +1,9 @@
 <?php
 if (isset($_POST['usuario']) || isset($_POST['senha'])){
-    if (strlen(($_POST['usuario']) == 0)){
-        echo('Preencha seu email');
-    }else if ($_POST['senha'] == 0){
-        echo('Preencha sua senha');
+    if (strlen(($_POST['usuario'])) == 0){
+        echo('Preencha seu email!');
+    }else if (strlen(($_POST['senha'])) == 0){
+        echo('Preencha sua senha!');
     }else{
         $usuario = $mysqli->real_escape_string($_POST['usuario']);
         $senha = $mysqli->real_escape_string($_POST['senha']);

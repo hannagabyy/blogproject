@@ -1,7 +1,5 @@
 <?php
-//  if(!isset($_SESSION)){
-//     session_start();
-// }
+include('./protect.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,5 +10,9 @@
 </head>
 <body>
     Bem vindo ao blog!
+
+    <p>
+        <a href="logout.php">Sair</a>
+    </p>
 </body>
 </html>
