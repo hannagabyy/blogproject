@@ -9,5 +9,26 @@ html{
 body{
     background-color: var(--bg-color);
     height: 100%;
+}
+
+main i{
+    font-size: 22px;
+}
+
+@media (min-width: 1200px){
+    #formularioIndex{
+        width: 600px !important;
+    }
 
 }
+
+@media (max-width: 768px){
+    #formularioIndex{
+        width: 400px !important;
+    }
+    #usuario, #senha{
+        width: 250px !important;
+    }
+
+}
+

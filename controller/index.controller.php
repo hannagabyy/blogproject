@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['usuario']) || isset($_POST['senha'])){
     if (strlen(($_POST['usuario'])) == 0){
-        echo('Preencha seu email!');
+        echo('Preencha seu usuário!');
     }else if (strlen(($_POST['senha'])) == 0){
         echo('Preencha sua senha!');
     }else{
@@ -20,8 +20,7 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['user'] = $usuario['usuario'];
 
-            debug($_SESSION);die;
-            header("Location:home.php");
+            header("Location:./modules/home/home.php");
 
         }else{
             echo("Erro ao tentar logar ! Usuário ou senha incorretos!");
