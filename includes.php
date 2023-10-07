@@ -1,3 +1,3 @@
 <?php
 include('debug.php');
-include('./conexao.php');
+include('conexao.php');

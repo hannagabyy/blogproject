@@ -11,16 +11,11 @@ body{
     height: 100%;
 }
 
-main i{
-    font-size: 22px;
-}
-
 #formularioIndex{
     max-width: 600px;
     min-width: 400px;   
 }
 
-#usuario, #senha{
-    width: 250px;
+#usuario, #senha, #email{
+    min-width: 250px;
 }
-
