@@ -9,7 +9,6 @@ include('includes.php');
         <title>Login</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link rel="stylesheet" href="style/index.css">
-        <link rel="stylesheet" href="style/page.css">
     </head>
 
     <body>

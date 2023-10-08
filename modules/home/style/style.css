@@ -11,3 +11,25 @@ body{
     height: 100%;
 }
 
+#fotoUsuario{
+    border-radius: 50%;
+    background-color: white;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+
+#publicacaoUsuario{
+    border-radius: 0 30px 30px 30px;
+    background-color: white;
+    max-height: 300px;
+    font: 20pt arial blue;
+   
+}
+
+@media (max-width: 780px) {
+    #fotoUsuario{
+        max-width: 80px;
+        max-height: 80px;
+    }
+  }
