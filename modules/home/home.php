@@ -1,6 +1,7 @@
 <?php
+
 include("../../controller/protect.php");
-include("../../defaultHtml.php")
+include("../../defaultHtml.php");
 ?>
 
 <main class="h-100 text-center pt-5 display-3">    

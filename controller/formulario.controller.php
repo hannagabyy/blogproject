@@ -8,9 +8,11 @@ if(isset($_POST['submit']))
         $email = $_POST['email'];
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
+        $query = sprintf("INSERT INTO usuarios(email,usuario,senha)
+        VALUES ('$email','$usuario','%s');",
+        password_hash($senha,PASSWORD_DEFAULT));
 
-        $result = mysqli_query($mysqli, "INSERT INTO usuarios(email,usuario,senha)
-        VALUES ('$email','$usuario','$senha')");
+        $result = mysqli_query($mysqli,$query);
         echo('Usuário cadastrado com sucesso');
 
         header('Location: ../../index.php');
