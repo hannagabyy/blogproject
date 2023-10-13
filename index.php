@@ -15,14 +15,14 @@ include('includes.php');
         <script src="https://kit.fontawesome.com/a679630483.js" crossorigin="anonymous"></script>
                        
         <main class="h-100 d-flex align-items-center justify-content-center"> 
-            <form id="formularioIndex" class="bg-white p-4 w-50 rounded" method="POST">
+            <form id="formularioIndex" class="bg-white p-4 w-50 rounded shadow-lg" method="POST">
                 <h1 class="text-center mb-3 text-primary">LOGIN</h1>
 
                 <div id="usuario" class="mb-3 w-50 mx-auto">
                     <label for="inputUsuario" class="form-label text-primary fs-6">Usuário</label>
                     <div class="input-group">      
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-circle-user" style="color: #5b5252;"></i></span>
-                    <input type="text" class="form-control" name="usuario"/>
+                    <input type="text" class="form-control" name="usuario" required/>
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@ include('includes.php');
                     <label for="inputSenha" class="form-label text-primary fs-6">Senha</label>
                     <div class="input-group">
                     <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-lock" style="color: #5b5252;"></i></span>
-                    <input type="password" class="form-control" name="senha">
+                    <input type="password" class="form-control" name="senha" required>
                     </div>
                 </div>
                 <div class="mb-3 text-danger text-center"><?php include('./controller/index.controller.php'); ?></div>
