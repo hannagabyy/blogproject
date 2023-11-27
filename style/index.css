@@ -1,5 +1,6 @@
 :root{
-    --bg-color: #CACACA;
+    --bg-color: #1f1f1f;
+    --font-color:#525252;;
 }
 
 html{
@@ -8,6 +9,7 @@ html{
 
 body{
     background-color: var(--bg-color);
+    color: var(--font-color);
     height: 100%;
 }
 

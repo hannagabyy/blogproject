@@ -4,11 +4,11 @@ include("../../controller/protect.php");
 include("../../defaultHtml.php");
 ?>
 
-<h1 class="text-center display-4 mt-5">Bem vindo ao Blog!</h1>
+<h1 class="titulo-principal text-center display-2 mt-5 text-light">Bem vindo ao Blog!</h1>
 
 <main class="mt-5 mx-auto rounded rounded-5 p-2">  
 
-    <div class="container w-100 h-100 mx-auto mt-5 p-3 rounded">
+    <div class="w-100 h-100 mx-auto mt-5 p-3 rounded">
         <div id="fotoUsuario" class="mb-1"></div>
         <div id="publicacaoUsuario" class="w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -21,7 +21,7 @@ include("../../defaultHtml.php");
         </div>
     </div>
 
-    <div class="container w-100 h-100 mx-auto mt-5 p-3 rounded">
+    <div class=" w-100 h-100 mx-auto mt-5 p-3 rounded">
         <div id="fotoUsuario" class="mb-1"></div>
         <div id="publicacaoUsuario" class="w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -34,7 +34,7 @@ include("../../defaultHtml.php");
         </div>
     </div>
 
-    <div class="container w-100 h-100 mx-auto mt-5 p-3 rounded">
+    <div class=" w-100 h-100 mx-auto mt-5 p-3 rounded">
         <div id="fotoUsuario" class="mb-1"></div>
         <div id="publicacaoUsuario" class="w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -50,9 +50,7 @@ include("../../defaultHtml.php");
     
 </main>
 
-<p class="text-center display-3 mb-5">
-    <a href="../../controller/logout.php">Sair</a>
-</p>
+
 
 <script onload="iniciaLoading()" src="./javascript/home.js"></script>
 
