@@ -1,4 +1,6 @@
 <?php
+include(__DIR__."/../includes.php");
+
 if (isset($_POST['usuario']) || isset($_POST['senha'])){
     if (strlen(($_POST['usuario'])) == 0){
         echo('Preencha seu usuário!');
@@ -20,17 +22,15 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             if(!isset($_SESSION)){
                 session_start();
             }
+
             $_SESSION['id'] = $row['id'];
             $_SESSION['user'] = $row['usuario'];
             
-            
-        header("Location:./modules/home/home.php");
+            header("Location: ./modulos/home.php");
 
         }else{
             echo("Erro ao tentar logar ! Usuário ou senha incorretos!");
-        }
-       
-            
+        }           
             
         
     }

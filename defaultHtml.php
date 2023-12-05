@@ -1,6 +1,3 @@
-<?php
-include('includes.php');
-?>
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -8,7 +5,7 @@ include('includes.php');
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Blog</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="../style/home.css">
     </head>
 
     <body>
@@ -59,7 +56,7 @@ include('includes.php');
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                                 <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item" href="../../controller/logout.php">Sair</a></li>
+                                                <li><a class="dropdown-item" href="../logout.php">Sair</a></li>
                                             </ul>
                                     </li>
                                     </div>

@@ -1,8 +1,4 @@
-<?php
-
-include("../../controller/protect.php");
-include("../../defaultHtml.php");
-?>
+<?php include(__DIR__."/../defaultHtml.php"); ?>
 
 <h1 class="titulo-principal text-center display-2 mt-5 text-light">Bem vindo ao Blog!</h1>
 
@@ -54,4 +50,4 @@ include("../../defaultHtml.php");
 
 <script onload="iniciaLoading()" src="./javascript/home.js"></script>
 
-<?php include("../../defaultHtmlEnd.php")?>    
+<?php include(__DIR__."/../defaultHtmlEnd.php"); ?>
