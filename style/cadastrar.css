@@ -1,13 +1,9 @@
-:root{
-    --bg-color: #CACACA;
-}
 
 html{
     height: 100%;
 }
 
 body{
-    background-color: var(--bg-color);
     height: 100%;
 }
 
