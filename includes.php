@@ -1,3 +1,3 @@
 <?php
-include('debug.php');
+include('defaultFunctions.php');
 include('conexao.php');

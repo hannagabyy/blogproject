@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -9,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastre-se</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/home.css">
     </head>
 
     <body>
         <main class="h-100 d-flex align-items-center justify-content-center"> 
-            <form id="formularioIndex" class="bg-white p-4 w-50 rounded" action="formulario.php" method="POST">
+            <form id="formularioIndex" class="bg-white p-4 w-50 rounded" action="cadastrar.php" method="POST">
                 <h1 class="text-center mb-3 text-primary">CADASTRE-SE</h1>
 
 
@@ -41,9 +37,9 @@
                         <input type="password" class="form-control" name="senha" required>
                     </div>
                 </div>
-                <div class="mb-3 text-danger text-center"><?php include('../../controller/formulario.controller.php'); ?></div>
+                <div class="mb-3 text-danger text-center"><?php include(__DIR__.'/../controller/cadastrar.controller.php');  ?></div>
                 <div class="d-flex justify-content-center"><button type="submit" name="submit" class="btn btn-primary px-4">Cadastrar</button></div>
-                <div class="d-flex justify-content-center mt-2"><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="../../index.php">Entrar</a></div>
+                <div class="d-flex justify-content-center mt-2"><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="../index.php">Entrar</a></div>
             </form>
             
         </main>

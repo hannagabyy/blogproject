@@ -5,6 +5,7 @@ $senha ='';
 $database ='blog';
 $host = 'localhost';
 
+global $mysqli;
 $mysqli = new mysqli($host,$usuario,$senha,$database);
 
 if ($mysqli->error){
