@@ -28,31 +28,27 @@ include('includes.php');
                     
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto border border-secondary rounded-3 mb-2">
-                            <li class="nav-item mx-2">
-                                <a class="nav-link active text-light" aria-current="page" href="#">Página inicial</a>
+                            <li class="nav-item mx-2 nav-menu-item ">
+                                <a class="nav-link active text-light " aria-current="page" href="#">Página inicial</a>
                             </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link text-light" href="../posts/post.php">Posts</a>
+                            <li class="nav-item mx-2 nav-menu-item">
+                                <a class="nav-link text-light " href="../posts/post.php">Posts</a>
                              </li>
-                             <li class="nav-item mx-2">
-                                <a class="nav-link text-light" href="../posts/post.php">Meus posts</a>
+                             <li class="nav-item mx-2 nav-menu-item">
+                                <a class="nav-link text-light " href="../posts/post.php">Meus posts</a>
                              </li>
                              
                         </ul>
                         <form class="d-flex g-3" role="search">
                             <input class="form-control m-2" type="search" placeholder="Digite aqui" aria-label="Search">
-                            <button class="pesquisa__submit border border-secondary bg- transparent rounded-3" type="submit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                                </svg>
-                             </button>
+                            <button class="btn btn-outline-success w-40 h-70 m-auto" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                         
                             <div class="offcanvas-body">
                                 <ul class="navbar-nav">
                                     <div class="dropdown">
                                     <li class="nav-item dropdown">
-                                            <button class="btn btn-secondary  btn-sm m-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary btn-sm m-1 mx-3 m-auto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="fa-solid fa-gear" style="color: #fff;"></i>
                                                 Configurações
                                             </button>
