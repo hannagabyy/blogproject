@@ -1,16 +1,19 @@
-/* 
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@300;400;500;700&display=swap');
+@import url('./home.css');
+
+
 :root{
-    --bg-color: #1f1f1f;
-    --font-color:#525252;;
+    --bg-color: #212529;
+    --font-color:#525252;
 }
 
 html{
-    height: 100%;
+    height: 100%;  
 }
 
 body{
-    background-color: var(--bg-color);
-    color: var(--font-color);
+    background-color: var(--bg-color)!important;
+    color:var(--font-color);
     height: 100%;
 }
 
@@ -26,4 +29,4 @@ main i{
 #usuario, #senha{
     width: 250px;
 }
- */
+
