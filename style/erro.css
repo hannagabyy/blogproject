@@ -1,0 +1,13 @@
+.not-found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+    border-radius: 2rem;
+    width: 40%;
+    height: 70%;
+    background-color: var(--laranja-claro);
+}
+.not-found__imagem{
+    width: 80%;
+}
