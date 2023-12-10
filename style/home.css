@@ -13,28 +13,3 @@
     width: 10px;
     height: 10px;
 }
-
-#fotoUsuario{
-    width: 50em;
-    height: 50em;
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
-    background-color: white;
-}
-
-
-#publicacaoUsuario{
-    border-radius: 0 30px 30px 30px;
-    background-color: white;
-    max-height: 300px;
-
-   
-}
-
-@media (max-width: 780px) {
-    #fotoUsuario{
-        max-width: 80px;
-        max-height: 80px;
-    }
-  }
