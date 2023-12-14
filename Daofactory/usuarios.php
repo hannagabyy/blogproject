@@ -35,12 +35,20 @@ class Usuarios {
     public static function deleteUsuariosById($id) {
         global $mysqli;
 
-        $sql_code = "DELETE FROM usuarios where id='$id' ";
+        $mysqli->begin_transaction();
+        
+        try{  
+            $sql_code = "DELETE FROM usuarios where id=? ";
+            $stmt = $mysqli->prepare($sql_code);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+        
+            $mysqli->commit();
 
-        if($mysqli->query($sql_code)){
-            return true;
+        }catch(mysqli_sql_exception $exception) {
+            $mysqli->rollback();
+    
         }
-        return false;
     }
 
     public static function updateUsuarios($id, $email=NULL, $usuario=NULL, $senha=NULL){
@@ -68,24 +76,44 @@ class Usuarios {
             $atualizacao += " senha=".$senha;
         }
 
-        $sql_code = "UPDATE usuarios SET ".$atualizacao." where id='$id' ";
+        $mysqli->begin_transaction();
+        
+        try{  
+            $sql_code = "UPDATE usuarios SET ".$atualizacao." where id=? ";
+            $stmt = $mysqli->prepare($sql_code);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+        
+            $mysqli->commit();
 
-        if($mysqli->query($sql_code)){
-            return true;
+        }catch(mysqli_sql_exception $exception) {
+            $mysqli->rollback();
+    
         }
-        return false;
+       
     }
 
     public static function insertUsuarios($email, $usuario, $senha){
         global $mysqli;
 
-        $sql_code = "INSERT INTO usuarios(email, usuario, senha) VALUES ('".$email."', '".$usuario."', '".$senha."')";
-        debug($sql_code);
-        if($mysqli->query($sql_code)){
-            return true;
-        }
-        return false;
+        $mysqli->begin_transaction();
         
+        try{  
+            $sql_code = "INSERT INTO usuarios(email, usuario, senha) VALUES (?, ?, ?)"; 
+            $stmt = $mysqli->prepare($sql_code);
+            $stmt->bind_param('sss', $email, $usuario, $senha);
+            $stmt->execute();
+
+            die('com sucesso');
+        
+            $mysqli->commit();
+
+        }catch(mysqli_sql_exception $exception) {
+            $mysqli->rollback();
+
+            die('com falha');
+    
+        } 
     }
 
 }
