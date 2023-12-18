@@ -2,10 +2,16 @@
 
 <h1 class="titulo-principal text-center display-2 mt-5 text-light">Bem vindo ao Blog!</h1>
 
-<main class="mt-5 mx-auto rounded rounded-5 p-2">  
-
+<main class="mt-5 mx-auto rounded rounded-5 p-2">
+    <div id="ex1" class="modal">
+        <p>Thanks for clicking. That felt good.</p>
+        <a href="#" rel="modal:close">Close</a>
+    </div>
+    <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+    <a rel="modal:open" class="btn text-white botao__novoPost d-flex justify-content-end align-items-center position-relative m-2" href="#ex1" role="button">Novo Post <img class="m-1" src="../images/plus-icon.svg" alt="Icone de mais"> </a>  
     <div class="w-100 h-100 mx-auto mt-5 p-3 rounded">
         <div id="fotoUsuario" class="mb-1"></div>
+        <p class="mx-auto">Maria Alana</p>
         <div id="publicacaoUsuario" class="w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -19,6 +25,7 @@
 
     <div class=" w-100 h-100 mx-auto mt-5 p-3 rounded">
         <div id="fotoUsuario" class="mb-1"></div>
+        <p class="mb-1">Maria Alana</p>
         <div id="publicacaoUsuario" class="w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -32,6 +39,7 @@
 
     <div class=" w-100 h-100 mx-auto mt-5 p-3 rounded">
         <div id="fotoUsuario" class="mb-1"></div>
+        <p class="mb-1" >Maria Alana</p>
         <div id="publicacaoUsuario" class="w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

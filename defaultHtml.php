@@ -6,8 +6,15 @@
         <title>Blog</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <link rel="stylesheet" href="../style/style.css">
+        <!-- <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="manifest" href="./images/site.webmanifest"> -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" />
+        <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
     </head>
-
+    
     <body>
         <script src="https://kit.fontawesome.com/a679630483.js" crossorigin="anonymous"></script>
         <nav class="navbar navbar-expand-lg nav-bar-light bg-transparent menu-nav w-100 ">
@@ -50,7 +57,7 @@
                                                 Configurações
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="./modulos/perfil.php">Perfil</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li><a class="dropdown-item" href="../logout.php">Sair</a></li>
                                             </ul>
