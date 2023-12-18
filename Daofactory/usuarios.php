@@ -103,15 +103,11 @@ class Usuarios {
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('sss', $email, $usuario, $senha);
             $stmt->execute();
-
-            die('com sucesso');
         
             $mysqli->commit();
 
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
-
-            die('com falha');
     
         } 
     }
