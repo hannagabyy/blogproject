@@ -3,6 +3,7 @@
 @import url('./home.css');
 @import url('./post.css');
 @import url('./erro.css');
+@import url('./modal.css');
 
 :root{
     --bg-color: #212529;

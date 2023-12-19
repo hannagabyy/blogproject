@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="not-found">
-        <img class="not-found__imagem" src="../images/not-found.svg" alt="Imagem de página não encontrada">
+        <img class="not-found__imagem" src="../imagens/not-found.svg" alt="Imagem de página não encontrada">
     </div>
 </body>
 </html>

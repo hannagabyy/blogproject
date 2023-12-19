@@ -1,0 +1,14 @@
+
+.modal-header,.input__post,.modal-footer{
+    border: none;
+} 
+.botao__postar{
+    background-color: var(--laranja);
+}
+.botao__postar:hover{
+    background-color: var(--laranja-escuro);
+}
+.botao__postar img{
+    width: 20px;
+    height: 20px;
+}
