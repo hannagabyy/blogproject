@@ -8,6 +8,8 @@
     --bg-color: #212529;
     --font-color:#525252;
     --laranja-claro:#E6DCCA;
+    --laranja : orange;
+    --laranja-escuro:rgb(190, 133, 26);
 }
 
 html{
