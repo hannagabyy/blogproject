@@ -34,7 +34,7 @@
                                 <a class="nav-link text-light " href="../posts/post.php">Posts</a>
                              </li>
                              <li class="nav-item mx-2 nav-menu-item">
-                                <a class="nav-link text-light " href="../posts/post.php">Meus posts</a>
+                                <a class="nav-link text-light " href="./meus_posts.php">Meus posts</a>
                              </li>
                              
                         </ul>

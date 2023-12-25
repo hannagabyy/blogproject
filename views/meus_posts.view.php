@@ -1,6 +1,6 @@
 <?php include(__DIR__."/../defaultHtml.php"); ?>
 
-<h1 class="titulo-principal text-center display-2 mt-5 text-light">Bem vindo ao Blog!</h1>
+<h1 class="titulo-principal text-center display-2 mt-5 text-light">Meus posts</h1>
 
 <main class="col-md-10 mx-auto">
     
@@ -11,7 +11,11 @@
             <p class="">Maria Alana</p>
         </div>
         
-        <div class="mt-5">
+        <div class="d-flex flex-column mt-5">
+            <div class="d-flex p-4 justify-content-end">
+                <button class="d-flex align-items-center mx-1 btn bg-primary text-light"><img class="icones-botoes m-1" src="../imagens/edit-icon.svg">Editar</button>
+                <button class="d-flex align-items-center mx-1 btn bg-danger text-light"><img class="icones-botoes m-1" src="../imagens/trash-icon.svg">Apagar</button>
+            </div>
             <div id="publicacaoUsuario" class=" w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -26,12 +30,16 @@
     </div>
 
     <div class="mt-5 d-flex justify-content-center mx-auto rounded align-items-center">
-        <div class="justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
             <div id="fotoUsuario" class=""></div>
             <p class="">Maria Alana</p>
         </div>
         
-        <div class="mt-5">
+        <div class="d-flex flex-column mt-5">
+            <div class="d-flex p-4 justify-content-end">
+                <button class="d-flex align-items-center mx-1 btn bg-primary text-light"><img class="icones-botoes m-1" src="../imagens/edit-icon.svg">Editar</button>
+                <button class="d-flex align-items-center mx-1 btn bg-danger text-light"><img class="icones-botoes m-1" src="../imagens/trash-icon.svg">Apagar</button>
+            </div>
             <div id="publicacaoUsuario" class=" w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -46,12 +54,16 @@
     </div>
 
     <div class="mt-5 d-flex justify-content-center mx-auto rounded align-items-center">
-        <div class="justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
             <div id="fotoUsuario" class=""></div>
             <p class="">Maria Alana</p>
         </div>
         
-        <div class="mt-5">
+        <div class="d-flex flex-column mt-5">
+            <div class="d-flex p-4 justify-content-end">
+                <button class="d-flex align-items-center mx-1 btn bg-primary text-light"><img class="icones-botoes m-1" src="../imagens/edit-icon.svg">Editar</button>
+                <button class="d-flex align-items-center mx-1 btn bg-danger text-light"><img class="icones-botoes m-1" src="../imagens/trash-icon.svg">Apagar</button>
+            </div>
             <div id="publicacaoUsuario" class=" w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -67,8 +79,6 @@
 
     
 </main>
-
-
 
 
 <?php include(__DIR__."/../defaultHtmlEnd.php"); ?>
