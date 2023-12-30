@@ -15,6 +15,8 @@ class Usuarios {
     public static function getUsuariosByEmail($email){
         global $mysqli;
 
+        $email = $mysqli->real_escape_string($email);
+
         $sql_code = "SELECT * FROM usuarios where email='$email' ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $row = $sql_query->fetch_assoc();
@@ -25,6 +27,8 @@ class Usuarios {
     public static function getUsuariosByUsuario($usuario){
         global $mysqli;
 
+        $usuario = $mysqli->real_escape_string($usuario);
+        
         $sql_code = "SELECT * FROM usuarios where usuario='$usuario' ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $row = $sql_query->fetch_assoc();
@@ -54,8 +58,11 @@ class Usuarios {
     public static function updateUsuarios($id, $email=NULL, $usuario=NULL, $senha=NULL){
         global $mysqli;
 
-        $atualizacao="";
+        $email = $mysqli->real_escape_string($email);
+        $usuario = $mysqli->real_escape_string($usuario);
 
+        $atualizacao="";
+        
         if(!is_null($email)){
             $atualizacao += " email=".$email;
         }
@@ -96,6 +103,8 @@ class Usuarios {
     public static function insertUsuarios($email, $usuario, $senha){
         global $mysqli;
 
+        $email = $mysqli->real_escape_string($email);
+        $usuario = $mysqli->real_escape_string($usuario);
         $mysqli->begin_transaction();
         
         try{  
