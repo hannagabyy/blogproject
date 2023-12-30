@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@300;400;500;700&display=swap');
+@import url('./login.css');
+@import url('./home.css');
+@import url('./post.css');
+@import url('./erro.css');
+@import url('./modal.css');
+@import url('./meus_posts.css');
+
+:root{
+    --bg-color: #212529;
+    --font-color:#525252;
+    --laranja-claro:#E6DCCA;
+    --laranja : orange;
+    --laranja-escuro:rgb(190, 133, 26);
+}
+
+html{
+    height: 100%;  
+}
+
+body{
+    background-color: var(--bg-color)!important;
+    color:var(--font-color);
+    height: 100%;
+}
+
+main i{
+    font-size: 22px;
+}

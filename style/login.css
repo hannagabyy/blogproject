@@ -1,0 +1,10 @@
+
+#formularioIndex{
+    max-width: 600px;
+    min-width: 400px;   
+}
+
+#usuario, #senha{
+    width: 250px;
+}
+

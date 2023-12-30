@@ -1,0 +1,28 @@
+
+.text-logo{
+    font-family: 'Agbalumo';
+    color: var(--laranja)!important;
+    text-shadow: 4px 2px 5px rgba(0,0,0,0.75);
+}
+.titulo-principal{
+    font-family: 'Agbalumo';
+    text-shadow: 4px 2px 5px rgba(0,0,0,0.75);
+}
+
+.pesquisa__submit{
+    width: 10px;
+    height: 10px;
+}
+.botao__novoPost{
+    background-color: var(--laranja);
+    width: 8rem;
+    height: 3rem;
+    left: 75%;
+}
+.botao__novoPost:hover{
+    background: var(--laranja-escuro);
+}
+.botao__novoPost img{
+    width: 20px;
+    height: 20px;
+}

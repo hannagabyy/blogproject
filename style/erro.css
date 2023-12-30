@@ -1,0 +1,19 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto;
+    border-radius: 2rem;
+    width: 40%;
+    height: 85%;
+    background-color: var(--laranja-claro);
+}
+.not-found__imagem{
+    width: 80%;
+}
+.not-found p{
+    color: var(--font-color);
+    font-weight: 800;
+    margin-top: -2rem;
+}

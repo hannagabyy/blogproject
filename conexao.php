@@ -2,10 +2,11 @@
 
 $usuario = 'root';
 $senha ='';
-$database ='login';
+$database ='blog';
 $host = 'localhost';
 
-$mysqli = new mysqli($host,$usuario,$senha,$database);
+global $mysqli;
+$mysqli = new mysqli($host,$usuario,'',$database);
 
 if ($mysqli->error){
     die("Falha ao conectar com o banco de dados:". $mysqli->error);
