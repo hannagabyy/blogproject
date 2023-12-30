@@ -2,10 +2,13 @@
 include(__DIR__."/../includes.php");
 require_once("../Daofactory/usuarios.php");
 
+if (isset($_SESSION['id'])){//alert você já está logado!
+    header("Location: ./modulos/home.php");
+}
+
 if(isset($_POST['submit'])){
         
-    // print_r(('email : '.$_POST('email')));
-    $email = $_POST['email'];
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
@@ -14,4 +17,5 @@ if(isset($_POST['submit'])){
     
     header('Location: ../index.php');
 }
+
 ?>    

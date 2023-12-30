@@ -2,6 +2,13 @@
 include(__DIR__."/../includes.php");
 require_once("./Daofactory/usuarios.php");
 
+if(!isset($_SESSION)){
+    session_start();
+}
+if (isset($_SESSION['id'])){//alert você já está logado!
+    header("Location: ./modulos/home.php");
+}
+
 if (isset($_POST['usuario']) || isset($_POST['senha'])){
     if (strlen(($_POST['usuario'])) == 0){
         echo('Preencha seu usuário!');
@@ -10,18 +17,14 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
         echo('Preencha sua senha!');
 
     }else{
-        $usuario = $mysqli->real_escape_string($_POST['usuario']);
-        $senha = $mysqli->real_escape_string($_POST['senha']);
+        $usuario = $_POST['usuario'];
+        $senha = $_POST['senha'];
         
         $row = Usuarios::getUsuariosByUsuario($usuario);
         
         if(isset($row) AND !empty($row)){           
             
-            if (password_verify($senha,$row['senha'])){
-        
-                if(!isset($_SESSION)){
-                    session_start();
-                }
+            if (password_verify($senha, $row['senha'])){
 
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['user'] = $row['usuario'];
