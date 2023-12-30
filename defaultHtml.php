@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Blog</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="\Blog_project\style\style.css">
          <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
     </head>
@@ -28,13 +28,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto border border-secondary rounded-3 mb-2">
                             <li class="nav-item mx-2 nav-menu-item ">
-                                <a class="nav-link active text-light " aria-current="page" href="#">Página inicial</a>
+                                <a class="nav-link active text-light " aria-current="page" href="/Blog_project/modulos/home.php">Página inicial</a>
                             </li>
                             <li class="nav-item mx-2 nav-menu-item">
                                 <a class="nav-link text-light " href="../posts/post.php">Posts</a>
                              </li>
                              <li class="nav-item mx-2 nav-menu-item">
-                                <a class="nav-link text-light " href="./meus_posts.php">Meus posts</a>
+                                <a class="nav-link text-light " href="\Blog_project\modulos\post\meus_posts.php">Meus posts</a>
                              </li>
                              
                         </ul>
@@ -54,7 +54,7 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="./modulos/perfil.php">Perfil</a></li>
                                                 <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item" href="../logout.php">Sair</a></li>
+                                                <li><a class="dropdown-item" href="\Blog_project\logout.php">Sair</a></li>
                                             </ul>
                                     </li>
                                     </div>
