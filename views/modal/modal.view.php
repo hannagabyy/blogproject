@@ -2,7 +2,7 @@
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
-                <form data-target="#exampleModal" class="" method="post" action="\Blog_project\modulos\post\cadastrar_post.php">
+                <form data-target="#exampleModal" class="" method="post" action="\Blog_project\public\post\cadastrar_post.php">
                     <div class="modal-header">
                         <button type="button" class="btn-close text-orange" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
