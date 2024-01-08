@@ -5,9 +5,12 @@
 @import url('./erro.css');
 @import url('./modal.css');
 @import url('./meus_posts.css');
+@import url('./meus_amigos.css');
 
 :root{
     --bg-color: #212529;
+    --cinza-claro : #4C4A4A;
+    --branco-transparente:#9A8E8E;
     --font-color:#525252;
     --laranja-claro:#E6DCCA;
     --laranja : orange;

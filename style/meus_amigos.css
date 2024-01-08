@@ -1,0 +1,39 @@
+.div-pesquisar{
+    width: 40em !important;
+}
+.color-white{
+    color: white;
+}
+
+.input-pesquisar::placeholder{
+    color: var(--branco-transparente);
+    padding: 2rem;
+}
+.input-pesquisar:focus,.input-pesquisar , .icone-pesquisar{
+    background-color: var(--cinza-claro);
+    border: none;
+    outline: none !important;
+    color: var(--branco-transparente);
+    box-shadow: none;
+}
+.fotoUsuario{
+    width: 5em;
+    height: 5em;
+}
+.icone-adicionar{
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+.card-nome{
+    margin-bottom: -2px;
+}
+.card-amigo{
+    width: 30em;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(94deg, rgba(255, 138, 0, 0.80) 0.4%, rgba(82, 82, 82, 0.50) 82.44%);
+    color: white;
+    stroke-width: 1px;
+    stroke: #403E3D;
+    background-blend-mode: darken, normal;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

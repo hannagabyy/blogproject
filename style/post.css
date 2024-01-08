@@ -1,5 +1,5 @@
 
-#fotoUsuario{
+.fotoUsuario{
     width: 50em;
     height: 50em;
     max-width: 150px;
@@ -7,19 +7,25 @@
     border-radius: 50%;
     background-color: white;
 }
-
-
 #publicacaoUsuario{
     border-radius: 0 30px 30px 30px;
     background-color: white;
-    max-height: 300px;
+    max-height: 300px; 
+}
 
-   
+.post-texto{
+    word-wrap: break-word;
 }
 
 @media (max-width: 780px) {
-    #fotoUsuario{
+    .fotoUsuario{
         max-width: 80px;
         max-height: 80px;
     }
   }
+@media screen and (min-width: 1025px){ 
+   
+    .post-texto{
+        width: 600px;
+    }
+ }

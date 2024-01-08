@@ -4,15 +4,14 @@
 
 <main class="col-md-10 mx-auto">
     
-    <a id="botao__abrir_modal"class="btn text-white botao__novoPost d-flex justify-content-end align-items-center position-relative m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Novo Post <img class="m-1" src="../../imagens/plus-icon.svg" alt="Icone de mais"> </a>  
-   
+    <a id="botao__abrir_modal"class="btn text-white botao__novoPost d-flex justify-content-end align-items-center position-relative m-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Novo Post <img class="m-1" src="../../imagens/plus-icon.svg" alt="Icone de mais"> </a>  
+   <!-- <button onclick="alert()" >CLIQUE AQUI</button> -->
     <?php if ($posts){
-
     foreach ($posts as $post): ?>
 
         <div class="mt-5 d-flex justify-content-center mx-auto rounded align-items-center">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <div id="fotoUsuario" class=""></div>
+            <div class="d-flex flex-column justify-content-center align-items-center me-5">
+                <div id="fotoUsuario" class="fotoUsuario"></div>
                 <p class=""><?= $usuario_nome ?></p>
             </div>
             
@@ -24,7 +23,7 @@
                         <button class="d-flex align-items-center mx-1 btn bg-danger text-light"><img class="icones-botoes m-1" src="../../imagens/trash-icon.svg">Apagar</button>
                     </form>
                 </div>
-                <div id="publicacaoUsuario" class=" w-75 mx-auto p-4 overflow-y-auto overflow-x-hidden text-start">
+                <div id="publicacaoUsuario" class="mx-auto p-4 overflow-y-auto overflow-x-hidden text-start post-texto">
                     <?= html_entity_decode($post['comentario']) ?>
                 </div>            
             </div>            
