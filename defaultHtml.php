@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="\blog_project\style\style.css">
          <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+         
     </head>
     
     <body>

@@ -8,6 +8,7 @@ if(isset($_POST['PostId'])) {
     $id = $_POST['PostId'];
 
     Post::deletePostById($id);
+    sleep(1);
 
 }else{
     //alert: algo deu errado
