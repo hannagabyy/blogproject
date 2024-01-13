@@ -12,7 +12,6 @@ if(isset($_POST['editor'])) {
     $comentario = strip_tags($_POST['editor'], $tagsPermitidas);
     $comentario =  htmlspecialchars($comentario);
 
-    // $comentario =  $_POST['editor'];
     $usuarioId = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 
     Post::insertPost($comentario, $usuarioId);
