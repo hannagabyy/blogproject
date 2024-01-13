@@ -15,7 +15,7 @@ class Post {
     public static function getPostByUsuarioId($usuarioId){
         global $mysqli;
         
-        $sql_code = "SELECT * FROM post where usuarioId='$usuarioId' ";
+        $sql_code = "SELECT * FROM post where usuarioId='$usuarioId' order by id DESC";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $result = $sql_query->fetch_all(MYSQLI_ASSOC);
 

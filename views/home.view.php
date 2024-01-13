@@ -18,7 +18,7 @@
                         </div>
 
                         <div class="d-flex flex-column mt-5">
-                            <div id="publicacaoUsuario" class="mx-auto p-4 overflow-y-auto overflow-x-hidden text-start post-texto">
+                            <div class="publicacaoUsuario mx-auto p-4 overflow-y-auto overflow-x-hidden text-start post-texto">
                                 <?= html_entity_decode($post['comentario']) ?>
                             </div>
                         </div>
