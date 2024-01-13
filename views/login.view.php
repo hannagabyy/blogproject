@@ -34,9 +34,9 @@
                     <input type="password" class="form-control" name="senha" required>
                     </div>
                 </div>
-                <div class="mb-3 text-danger text-center"><?php include(__DIR__.'/../controller/login.controller.php'); ?></div>
+                <div class="mb-3 text-danger text-center"><?=$erro_login?></div>
                 <div class="d-flex justify-content-center"><button type="submit" class="btn btn-primary px-4">Entrar</button></div>
-                <div class="d-flex justify-content-center mt-2"><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="./modulos/cadastrar.php">Cadastre-se</a></div>
+                <div class="d-flex justify-content-center mt-2"><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="./public/cadastrar.php">Cadastre-se</a></div>
             </form>
             
         </main>

@@ -49,9 +49,9 @@ class Post {
         $mysqli->begin_transaction();
         
         try{  
-            $sql_code = "UPDATE post SET comentario=".$comentario." where id=? ";
+            $sql_code = "UPDATE post SET comentario=? where id=? ";
             $stmt = $mysqli->prepare($sql_code);
-            $stmt->bind_param('i', $id);
+            $stmt->bind_param('si', $comentario, $id);
             $stmt->execute();
         
             $mysqli->commit();
