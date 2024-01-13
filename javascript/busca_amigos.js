@@ -1,6 +1,6 @@
 function buscarAmigo(nomePesquisa){
     console.log('teclou');
-    let caixaDeResultado = document.querySelector('#caixa_de_resultado');
+    let caixaDeResultado = document.querySelector('#caixaDeResultados');
 
     if (nomePesquisa.length == 0) { 
         caixaDeResultado.style.display='none';
