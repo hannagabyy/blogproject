@@ -30,19 +30,20 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto border border-secondary rounded-3 mb-2">
                             <li class="nav-item mx-2 nav-menu-item ">
-                                <a class="nav-link active text-light " aria-current="page" href="/Blog_project/modulos/home.php">Página inicial</a>
+                                <a class="nav-link active text-light " aria-current="page" href="/Blog_project/public/home.php">Página inicial</a>
                             </li>
                             <li class="nav-item mx-2 nav-menu-item">
                                 <a class="nav-link text-light " href="\Blog_project\modulos\amigos\meus_amigos.php">Amigos</a>
                              </li>
                              <li class="nav-item mx-2 nav-menu-item">
-                                <a class="nav-link text-light " href="\Blog_project\modulos\post\meus_posts.php">Meus posts</a>
+                                <a class="nav-link text-light " href="\Blog_project\public\post\meus_posts.php">Meus posts</a>
                              </li>
                              
                         </ul>
-                        <form class="d-flex g-3" role="search">
-                            <input class="form-control m-2" type="search" placeholder="Digite aqui" aria-label="Search">
-                            <button class="btn btn-outline-success w-40 h-70 m-auto" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                        <form class="d-flex g-3" role="search" method="post">
+                            <input class="form-control m-2" type="search" placeholder="Digite aqui" aria-label="Search" name="busca_amigo" id="busca_amigo" onkeyup="buscarAmigo(this.value)">
+                            <button class="btn btn-outline-success w-40 h-70 m-auto" name="botao_pesquisar" id="botao_pesquisar"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                            <div id="caixa_de_resultado" style="display: none;">Resultados</div>
                         </form>
                         
                             <div class="offcanvas-body">
@@ -54,7 +55,7 @@
                                                 Configurações
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="./modulos/perfil.php">Perfil</a></li>
+                                                <li><a class="dropdown-item" href="./public/perfil.php">Perfil</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li><a class="dropdown-item" href="\Blog_project\logout.php">Sair</a></li>
                                             </ul>

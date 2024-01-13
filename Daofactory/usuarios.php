@@ -121,4 +121,16 @@ class Usuarios {
         } 
     }
 
+    public static function buscaAmigos($nome_amigo){
+        global $mysqli;
+
+        $nome_amigo = $mysqli->real_escape_string($nome_amigo);
+        
+        $sql_code = "SELECT * FROM usuarios where usuario like '$nome_amigo%' LIMIT 10";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $row = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $row;
+    }
+
 }
