@@ -21,17 +21,17 @@
 //     //   })
 // })
 
-let botao = document.getElementById('clique');
-console.log(botao)
-botao.addEventListener('click', function () {
-  console.log('entrou no cliq1ue')
-  Swal.fire({
-    title: "Good job!",
-    text: "You clicked the button!",
-    icon: "success",
-    timer: 2000
-  });
-})
+// let botao = document.getElementById('clique');
+// console.log(botao)
+// botao.addEventListener('click', function () {
+//   console.log('entrou no cliq1ue')
+//   Swal.fire({
+//     title: "Good job!",
+//     text: "You clicked the button!",
+//     icon: "success",
+//     timer: 2000
+//   });
+// })
 
 
 // $('#botao').on('click',function(e){
