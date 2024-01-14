@@ -23,7 +23,7 @@
                         <button class="d-flex align-items-center mx-1 btn bg-danger text-light apagar-post" ><img class="icones-botoes m-1" src="../../imagens/trash-icon.svg">Apagar</button>
                     </form>
                 </div>
-                <div id="publicacaoUsuario" class="mx-auto p-4 overflow-y-auto overflow-x-hidden text-start post-texto">
+                <div class="mx-auto p-4 overflow-y-auto overflow-x-hidden text-start post-texto publicacaoUsuario ">
                     <?= html_entity_decode($post['comentario']) ?>
                 </div>            
             </div>            
