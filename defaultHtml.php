@@ -39,13 +39,7 @@
                                 <a class="nav-link text-light " href="\Blog_project\public\post\meus_posts.php">Meus posts</a>
                              </li>
                              
-                        </ul>
-                        <form class="d-flex g-3" role="search" method="post">
-                            <input class="form-control m-2" type="search" placeholder="Digite aqui" aria-label="Search" name="busca_amigo" id="busca_amigo" onkeyup="buscarAmigo(this.value)">
-                            <button class="btn btn-outline-success w-40 h-70 m-auto" name="botao_pesquisar" id="botao_pesquisar"> <i class="fa-solid fa-magnifying-glass"></i></button>
-                            <div style="display: none;">Resultados</div>
-                        </form>
-                        
+                        </ul>                        
                             <div class="offcanvas-body">
                                 <ul class="navbar-nav">
                                     <div class="dropdown">
