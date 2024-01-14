@@ -26,3 +26,9 @@
     width: 20px;
     height: 20px;
 }
+@media screen and (min-width: 1025px){ 
+   
+    .post-texto{
+        width: 600px;
+    }
+ }

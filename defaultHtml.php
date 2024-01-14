@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Blog</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link rel="stylesheet" href="\Blog_project\style\style.css">
+        <link rel="stylesheet" href="\blog_project\style\style.css">
          <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+         
     </head>
     
     <body>
@@ -28,21 +30,16 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav mx-auto border border-secondary rounded-3 mb-2">
                             <li class="nav-item mx-2 nav-menu-item ">
-                                <a class="nav-link active text-light " aria-current="page" href="/Blog_project/modulos/home.php">Página inicial</a>
+                                <a class="nav-link active text-light " aria-current="page" href="/Blog_project/public/home.php">Página inicial</a>
                             </li>
                             <li class="nav-item mx-2 nav-menu-item">
-                                <a class="nav-link text-light " href="../posts/post.php">Posts</a>
+                                <a class="nav-link text-light " href="\Blog_project\public\amigos\meus_amigos.php">Amigos</a>
                              </li>
                              <li class="nav-item mx-2 nav-menu-item">
-                                <a class="nav-link text-light " href="\Blog_project\modulos\post\meus_posts.php">Meus posts</a>
+                                <a class="nav-link text-light " href="\Blog_project\public\post\meus_posts.php">Meus posts</a>
                              </li>
                              
-                        </ul>
-                        <form class="d-flex g-3" role="search">
-                            <input class="form-control m-2" type="search" placeholder="Digite aqui" aria-label="Search">
-                            <button class="btn btn-outline-success w-40 h-70 m-auto" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                        
+                        </ul>                        
                             <div class="offcanvas-body">
                                 <ul class="navbar-nav">
                                     <div class="dropdown">
@@ -52,7 +49,7 @@
                                                 Configurações
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="./modulos/perfil.php">Perfil</a></li>
+                                                <li><a class="dropdown-item" href="./public/perfil.php">Perfil</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li><a class="dropdown-item" href="\Blog_project\logout.php">Sair</a></li>
                                             </ul>

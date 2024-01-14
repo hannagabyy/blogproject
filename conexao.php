@@ -5,10 +5,13 @@ $senha ='';
 $database ='blog';
 $host = 'localhost';
 
-global $mysqli;
-$mysqli = new mysqli($host,$usuario,'',$database);
+global $mysqli; // botar try catch de novo
+try{
+    $mysqli = new mysqli($host,$usuario,$senha,$database);
 
-if ($mysqli->error){
-    die("Falha ao conectar com o banco de dados:". $mysqli->error);
+}catch (Exception $msg) {
+    include('erro.php');
+    die;
+    
 }
-?>
+

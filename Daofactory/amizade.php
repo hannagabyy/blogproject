@@ -1,8 +1,25 @@
 <?php
 
 class Amizade {    
+
+    public static function getAmizadesByUsuarioId($usuarioId){
+        global $mysqli;
+             
+        $sql_code = "SELECT 
+                        CASE
+                            WHEN usuario_id1 = $usuarioId 
+                                THEN usuario_id2
+                            ELSE usuario_id1
+                        END AS usuarioId
+                    FROM amizade 
+                    WHERE usuario_id1='$usuarioId' OR usuario_id2='$usuarioId' ";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $result = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $result; 
+    }
     
-    public static function getAmizadesByUsuarioId($usuario_id1, $usuario_id2){
+    public static function verificaAmizade($usuario_id1, $usuario_id2){
         global $mysqli;
 
         $sql_code = "SELECT * FROM amizade where (usuario_id1='$usuario_id1' AND usuario_id2='$usuario_id2') OR (usuario_id1='$usuario_id2' AND usuario_id2='$usuario_id1') ";
