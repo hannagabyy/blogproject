@@ -4,7 +4,10 @@
 <main class="col-md-10 mx-auto">
     <div class="d-flex flex-column justify-content-center align-items-center my-4 w-100">
         <div id="fotoUsuario" class="fotoUsuario"></div>
-        <span class="editar-foto-perfil"><img class="icones-botoes m-1" src="/Blog_project/imagens/edit-icon-border.svg">Clique aqui para alterar a foto de perfil</span>
+        <label class="editar-foto-perfil m-2" for="fotoPerfil">
+             Escolha sua foto de perfil
+        </label>
+        <input type="file" name="fotoPerfil" class="editar-foto-perfil" accept="image/*"</input>
         <div class="mx-auto w-100">
             <form action="" class="form mx-auto m-4" >
                 <div class="d-flex justify-content-center align-items-center row-6">
