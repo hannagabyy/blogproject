@@ -27,21 +27,13 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             if (password_verify($senha, $row['senha'])){
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['user'] = $row['usuario'];
-                
-                // echo "<script>mostrarAlertaErro('LOGOUUUUUUUUU ao tentar logar ! Usuário ou senha incorretos!')</script>";
-                // echo "<script>console.log('olá louis')</script>";
+              
                 echo "<script>mostrarAlertaSucesso('Login efetuado com sucesso!','./public/home.php')</script>";
-                
-                    
-            
-                // header("Location: ./public/home.php");
 
             }else{
                 echo "<script>mostrarAlertaErro('Erro ao tentar logar ! Usuário ou senha incorretos!')</script>";
-            } 
-
-        }else{
-            // $erro_login ="Erro ao tentar logar ! Usuário ou senha incorretos!";               
+            }
+        }else{          
             echo "<script>mostrarAlertaErro('Erro ao tentar logar ! Usuário ou senha incorretos!')</script>";
         }          
              

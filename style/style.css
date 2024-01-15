@@ -6,11 +6,13 @@
 @import url('./modal.css');
 @import url('./meus_posts.css');
 @import url('./meus_amigos.css');
+@import url('./perfil.css');
 
 :root{
     --bg-color: #212529;
     --cinza-claro : #4C4A4A;
     --branco-transparente:#9A8E8E;
+    --fundo-crinza :#706F6F;
     --font-color:#525252;
     --laranja-claro:#E6DCCA;
     --laranja : orange;

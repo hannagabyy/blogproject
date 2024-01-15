@@ -40,24 +40,6 @@ function mostrarAlertaSucesso(mensagem,redirect=null) {
   }
 }
 
-// Função para alerta de sucesso de login
-function mostrarAlertaSucessoLogin(mensagem) {
-  Swal.fire({
-    title: 'Sucesso!',
-    text: mensagem,
-    icon: 'success'
-  });
-  setTimeout(function () {
-    window.location.href = './public/home.php';
-  }, 1000);
-}
-function sleep(mensagem){
-  setTimeout(() => {
-    console.log('entrou no timeout ainn');
-    alerta();
-  }, "1000");
-}
-
 
 let botoesApagar = document.querySelectorAll('.apagar-post');
 
@@ -74,5 +56,3 @@ if(botoesApagar!== null){
     });
   });
 }
-
-//Login alertas

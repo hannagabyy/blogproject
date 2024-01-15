@@ -14,7 +14,7 @@
             <form id="formularioIndex" class="bg-white p-4 w-50 rounded" action="cadastrar.php" method="POST">
                 <h1 class="text-center mb-3 text-primary">CADASTRE-SE</h1>
                 <div id="email" class="mb-3 w-50 mx-auto">
-                    <label for="inputEmail" class="form-label text-primary fs-6">EMAIL</label>
+                    <label for="inputEmail" class="form-label text-primary fs-6">Email</label>
                     <div class="input-group">      
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-circle-user" style="color: #5b5252;"></i></span>
                         <input type="email" class="form-control" name="email" autocomplete="on" required/>

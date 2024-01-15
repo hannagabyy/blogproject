@@ -49,7 +49,7 @@
                                                 Configurações
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="./public/perfil.php">Perfil</a></li>
+                                                <li><a class="dropdown-item" href="/Blog_project/public/perfil.php">Perfil</a></li>
                                                 <li><hr class="dropdown-divider"></li>
                                                 <li><a class="dropdown-item" href="\Blog_project\logout.php">Sair</a></li>
                                             </ul>

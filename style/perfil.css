@@ -1,0 +1,8 @@
+.editar-foto-perfil{
+    cursor: pointer;
+}
+.input-editar, .input-editar:focus{
+    background-color: var(--fundo-crinza);
+    border: none;
+    color: white!important;
+}
