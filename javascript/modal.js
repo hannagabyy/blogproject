@@ -49,14 +49,18 @@ function editarPost(postId, event){
 
 	criarModal(comentarioId);		
 
+	const div = document.createElement('div');
+	div.setAttribute('class', "d-flex justify-content-end");
+	comentario.parentElement.appendChild(div);
+
 	const button = document.createElement('button');
-	button.setAttribute('class', "btn btn-primary col-2 text-white d-flex justify-content-center align-items-center");
+	button.setAttribute('class', "d-flex align-items-center col-3 justify-content-center my-3 btn bg-success text-light");
 	button.setAttribute('id', "botao_salvar_edicao-post");
 	button.innerText="Salvar";
-	comentario.parentElement.appendChild(button);
+	div.appendChild(button);
 
 	const img =  document.createElement('img');
-	img.setAttribute('class', "ms-2");
+	img.setAttribute('class', "icones-botoes ms-2");
 	img.setAttribute('src', "../../imagens/correct-icon.svg");
 	img.setAttribute('alt', "Ícone de correto no botão de postar");
 	button.appendChild(img);

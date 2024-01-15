@@ -5,7 +5,6 @@
 <main class="col-md-10 mx-auto">
     
     <a id="botao__abrir_modal" class="btn text-white botao__novoPost d-flex justify-content-end align-items-center position-relative m-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Novo Post <img class="m-1" src="../../imagens/plus-icon.svg" alt="Icone de mais"> </a>  
-   <!-- <button  id="clique" >CLIQUE AQUI</button> -->
     <?php if ($posts){
         
     foreach ($posts as $post): ?>

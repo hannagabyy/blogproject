@@ -13,8 +13,6 @@
         <main class="h-100 d-flex align-items-center justify-content-center"> 
             <form id="formularioIndex" class="bg-white p-4 w-50 rounded" action="cadastrar.php" method="POST">
                 <h1 class="text-center mb-3 text-primary">CADASTRE-SE</h1>
-
-
                 <div id="email" class="mb-3 w-50 mx-auto">
                     <label for="inputEmail" class="form-label text-primary fs-6">EMAIL</label>
                     <div class="input-group">      

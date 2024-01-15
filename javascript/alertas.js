@@ -1,77 +1,78 @@
-// alert('entrou')
-// let botaoApagarPost = document.getElementById('apagar-post');
-// botaoApagarPost.addEventListener('click',function(e){
-//     e.preventDefault();
-//     let formDelete = document.getElementById('form-deletar-post');
+function mostrarAlertaErro(mensagem) {
+  Swal.fire({
+    title: 'Erro!',
+    text: mensagem,
+    icon: 'error'
+  });
+}
 
-//     console.log('clicou no botão')
+// Função para alerta de confirmação
+function mostrarAlertaConfirmacao(mensagem, confirmCallback) {
+  Swal.fire({
+    title: 'Você tem certeza?',
+    text: mensagem,
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Sim, deletar!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      confirmCallback();
+    }
+  });
+}
 
-//     // Swal.fire({
-//     //     title: 'Você tem certeza?',
-//     //     text: "Você não conseguira reverter isso!",
-//     //     icon: 'warning',
-//     //     showCancelButton: true,
-//     //     confirmButtonColor: '#3085d6',
-//     //     cancelButtonColor: '#d33',
-//     //     confirmButtonText: 'Sim, deletar!'
-//     //   }).then((result) => {
-//     //     if (result) {
-//     //         formDelete.onsubmit();
-//     //     }
-//     //   })
-// })
+// Função para alerta de sucesso
+function mostrarAlertaSucesso(mensagem,redirect=null) {
+  
+  Swal.fire({
+    title: 'Sucesso!',
+    text: mensagem,
+    icon: 'success',
+    showConfirmButton:false
+  });
+  if(redirect){
+    setTimeout(function () {
+      window.location.href = redirect;
+    }, 1000);
+  }
+}
 
-// let botao = document.getElementById('clique');
-// console.log(botao)
-// botao.addEventListener('click', function () {
-//   console.log('entrou no cliq1ue')
-//   Swal.fire({
-//     title: "Good job!",
-//     text: "You clicked the button!",
-//     icon: "success",
-//     timer: 2000
-//   });
-// })
+// Função para alerta de sucesso de login
+function mostrarAlertaSucessoLogin(mensagem) {
+  Swal.fire({
+    title: 'Sucesso!',
+    text: mensagem,
+    icon: 'success'
+  });
+  setTimeout(function () {
+    window.location.href = './public/home.php';
+  }, 1000);
+}
+function sleep(mensagem){
+  setTimeout(() => {
+    console.log('entrou no timeout ainn');
+    alerta();
+  }, "1000");
+}
 
 
-// $('#botao').on('click',function(e){
-//   console.log('entrou jquery')
-//   Swal.fire({
-//     title: "Good job!",
-//     text: "You clicked the button!",
-//     icon: "success"
-//   });
-// })
+let botoesApagar = document.querySelectorAll('.apagar-post');
 
-let botoesApagar = document.querySelectorAll('.apagar-post')
+if(botoesApagar!== null){
+  botoesApagar.forEach(function (botao) {
+    botao.addEventListener('click', function (e) {
+      e.preventDefault();
+      let formPost = botao.closest('form');
 
-botoesApagar.forEach(function (botao) {
-  botao.addEventListener('click', function (e) {
-    e.preventDefault();
-    let formPost = botao.closest('form');
-    // let postIdInput = formPost.querySelector('input[name="PostId"]');
-    // let postId = postIdInput.value;
-    Swal.fire({
-      title: 'Você tem certeza?',
-      text: "Você não conseguira reverter isso!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Sim, deletar!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-
+      mostrarAlertaConfirmacao('Você não conseguira reverter isso!', function () {
         formPost.submit();
-
-        Swal.fire({
-          title: "Deletado",
-          text: "Post Apagado com sucesso!",
-          icon: "success"
-        });
-
-      }
+        mostrarAlertaSucesso('Post apagado com sucesso!');
+      });
     });
   });
-});
+}
+
+//Login alertas
