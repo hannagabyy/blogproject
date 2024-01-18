@@ -32,3 +32,10 @@
         width: 600px;
     }
  }
+
+ @media screen and (max-width:480px){ 
+    .botao__novoPost{
+        left: 55%;
+    }
+    
+}

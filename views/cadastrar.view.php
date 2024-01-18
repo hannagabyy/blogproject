@@ -12,7 +12,7 @@
 
     <body>
         <main class="h-100 d-flex align-items-center justify-content-center"> 
-            <form id="formularioIndex" class="bg-white p-4 w-50 rounded" action="cadastrar.php" method="POST">
+            <form id="formularioIndex" class="bg-white p-4 rounded" action="cadastrar.php" method="POST">
                 <h1 class="text-center mb-3 text-primary">CADASTRE-SE</h1>
                 <div id="email" class="mb-3 w-50 mx-auto">
                     <label for="inputEmail" class="form-label text-primary fs-6">Email</label>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <div id="usuario" class="mb-3 w-50 mx-auto">
+                <div id="usuario" class="mb-3 w-50  mx-auto">
                     <label for="inputUsuario" class="form-label text-primary fs-6">Usuário</label>
                     <div class="input-group">      
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-circle-user" style="color: #5b5252;"></i></span>

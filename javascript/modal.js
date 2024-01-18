@@ -76,6 +76,7 @@ function salvarEdicao(postId, event){
 	event.preventDefault();	
 
 	let novoComentario = document.querySelector('.ck-content');
+	novoComentario.setAttribute('class', "modal-editar");
 	let comentarioConcatenado = "";
 
 	const xhttp = new XMLHttpRequest();

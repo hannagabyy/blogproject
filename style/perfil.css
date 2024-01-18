@@ -1,8 +1,30 @@
 .editar-foto-perfil{
     cursor: pointer;
 }
+.fotoUsuario-perfil{
+    width: 5rem;
+    height: 5rem;
+}
 .input-editar, .input-editar:focus{
     background-color: var(--fundo-crinza);
     border: none;
     color: white!important;
 }
+
+@media screen and (max-width:480px){
+    .input-form__grupos{
+        flex-direction: column;
+    }
+    .input-form__perfil{
+        width: 15rem!important;
+        margin: 0.5rem auto;
+    }
+    .fotoUsuario-perfil{
+        width: 10rem;
+        height: 10rem;
+    }
+    .editar-foto-perfil{
+        margin-bottom: 1rem;
+    }
+    
+ }

@@ -17,16 +17,38 @@
 .post-texto{
     word-wrap: break-word;
 }
-
-@media (max-width: 780px) {
-    .fotoUsuario{
-        max-width: 80px;
-        max-height: 80px;
-    }
-  }
 @media screen and (min-width: 1025px){ 
    
     .post-texto{
         width: 600px;
+    }
+ }
+@media (max-width: 780px) {
+    /* .fotoUsuario{
+        max-width: 80px;
+        max-height: 80px;
+    } */
+  }
+
+ @media screen and (min-width: 481px){
+    .post-texto{
+        width: 50vw;
+    }
+}
+ @media screen and (max-width:480px){ 
+    .post-texto{
+        width: 14rem;
+        margin: 1 auto 1.5rem auto;
+    }
+    .fotoUsuario{
+        width: 80px;
+        height: 80px;
+    }
+    .fotoUsuario,.nome-usuario{
+      margin-right: -1rem!important;
+    }
+    
+    .div-post:last-child{
+        margin-bottom: 3rem;
     }
  }

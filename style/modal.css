@@ -4,6 +4,7 @@
 } 
 .botao__postar{
     background-color: var(--laranja);
+    border: none;
 }
 .botao__postar:hover{
     background-color: var(--laranja-escuro);
@@ -12,3 +13,16 @@
     width: 20px;
     height: 20px;
 }
+
+@media screen and (max-width:480px){
+    .botao__postar{
+        width: 8rem;
+        height: 3rem;
+        font-size: 1.5em;
+       
+    } 
+    .ck-editor__editable{
+        height: 15rem;
+    }
+    
+ }

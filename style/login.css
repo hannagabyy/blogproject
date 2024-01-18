@@ -1,10 +1,23 @@
-
-#formularioIndex{
-    max-width: 600px;
-    min-width: 400px;   
+#usuario, #senha,#email{
+    width: 15rem;
 }
 
-#usuario, #senha{
-    width: 250px;
-}
-
+@media screen and (min-width: 1025px){ 
+   
+    #formularioIndex{
+        width: 50%;
+        max-width: 600px;
+        min-width: 400px;   
+    }
+ }
+@media screen and (max-width:480px){ 
+   
+    #formularioIndex{
+        margin: 0.5rem;
+    }
+    #usuario, #senha,#email{
+        width: 100%  !important;
+    }
+    
+    
+ }

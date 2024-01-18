@@ -14,9 +14,9 @@
     
     <body>
                  
-        <main class="w-100 h-100 d-flex align-items-center justify-content-center"> 
+        <main class="w-100 h-100 d-flex align-items-center justify-content-center main-login"> 
                     
-            <form id="formularioIndex" class="bg-white p-4 w-50 rounded shadow-lg" method="POST">
+            <form id="formularioIndex" class="bg-white p-4 rounded shadow-lg " method="POST">
                 <h1 class="text-center mb-3 text-primary">LOGIN</h1>
 
                 <div id="usuario" class="mb-3 w-50 mx-auto">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 
-                <div class="d-flex justify-content-center"><button type="submit" class="btn btn-primary px-4">Entrar</button></div>
+                <div class="d-flex justify-content-center"><button type="submit" class="btn btn-primary px-4 mt-3">Entrar</button></div>
                 <div class="d-flex justify-content-center mt-2"><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="./public/cadastrar.php">Cadastre-se</a></div>
             </form>
             

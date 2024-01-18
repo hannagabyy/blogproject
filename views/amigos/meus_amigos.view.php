@@ -11,18 +11,6 @@
     </div>
 
     <section id="caixaDeResultados" class="d-flex flex-wrap justify-content-around">
-    <!-- <div class="d-flex flex-column">        
-        <div class="m-2 d-flex justify-content-between align-items-center mx-auto p-2 rounded card-amigo">
-            <div class="fotoUsuario"></div>
-            <div class="d-flex flex-column justify-content-start align-itens-center informacoes-amigo">     
-                <p class="fs-3 card-nome">Nome do amigo</p>
-                <p class="fs-6lead text-center">amigo@email.com</p>
-            </div>
-            <div>
-                <span><img src="/blog_project/imagens/add-friend-icon.svg" class="icone-adicionar m-3"></span>
-            </div>
-        </div>
-    </div> -->
     </section>
   
 </main>

@@ -13,10 +13,10 @@ if(!empty($usuarios_achados)){
         echo '
             <div class="d-flex flex-column">        
                 <div class="m-2 d-flex justify-content-between align-items-center mx-auto p-2 rounded card-amigo">
-                    <div class="fotoUsuario"></div>
+                    <div class="fotoUsuario-busca-amigo bg-white rounded-circle"></div>
                     <div class="d-flex flex-column justify-content-start align-itens-center informacoes-amigo">     
                         <p class="fs-3 card-nome">'.$usuario['usuario'].'</p>
-                        <p class="fs-6lead text-center">'.$usuario['email'].'</p>
+                        <p class="fs-6lead text-center card-email">'.$usuario['email'].'</p>
                     </div>
                     <div>
                         <span><img src="/blog_project/imagens/add-friend-icon.svg" class="icone-adicionar m-3"></span>
