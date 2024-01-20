@@ -55,7 +55,7 @@ class Usuarios {
         }
     }
 
-    public static function updateUsuarios($id, $email=NULL, $usuario=NULL, $senha=NULL){
+    public static function updateUsuarios($id, $email, $usuario, $senha){
         global $mysqli;
 
         $email = $mysqli->real_escape_string($email);
@@ -63,24 +63,24 @@ class Usuarios {
 
         $atualizacao="";
         
-        if(!is_null($email)){
-            $atualizacao += " email=".$email;
+        if(!empty($email)){
+            $atualizacao .= " email='".$email."'";
         }
 
-        if(!is_null($usuario)){
+        if(!empty($usuario)){
             if(!empty($atualizacao)){
-                $atualizacao += ",";
+                $atualizacao .= ",";
             }
 
-            $atualizacao += " usuario=".$usuario;    
+            $atualizacao .= " usuario='".$usuario."'";    
         }
 
-        if(!is_null($senha)){
+        if(!empty($senha)){
             if(!empty($atualizacao)){
-                $atualizacao += ",";
+                $atualizacao .= ",";
             }
 
-            $atualizacao += " senha=".$senha;
+            $atualizacao .= " senha='".$senha."'";
         }
 
         $mysqli->begin_transaction();

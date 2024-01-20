@@ -5,14 +5,12 @@ class Amizade {
     public static function getAmizadesByUsuarioId($usuarioId){
         global $mysqli;
              
-        $sql_code = "SELECT 
-                        CASE
-                            WHEN usuario_id1 = $usuarioId 
-                                THEN usuario_id2
+        $sql_code = "SELECT
+                        CASE 
+                            WHEN usuario_id1 = $usuarioId THEN usuario_id2
                             ELSE usuario_id1
                         END AS usuarioId
-                    FROM amizade 
-                    WHERE usuario_id1='$usuarioId' OR usuario_id2='$usuarioId' ";
+        FROM amizade WHERE usuario_id1='$usuarioId' OR usuario_id2='$usuarioId' ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $result = $sql_query->fetch_all(MYSQLI_ASSOC);
 
