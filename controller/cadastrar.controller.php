@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__."/../includes.php");
-require_once("../Daofactory/usuarios.php");
+require_once(__DIR__."/Daofactory/usuarios.php");
 
 if (isset($_SESSION['id'])){//alert você já está logado!
     header("Location: ./public/home.php");
