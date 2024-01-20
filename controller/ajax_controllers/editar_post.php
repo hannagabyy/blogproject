@@ -5,7 +5,7 @@ require_once("../../Daofactory/post.php");
 
 $postId = filter_input(INPUT_POST, 'postId', FILTER_VALIDATE_INT);
 
-if($postId){
+if(!empty($postId)){
     $tagsPermitidas = '<p><ul><li><i><ol><h1><h2><h3><h4><strong>';
     $comentario = strip_tags($_POST['comentario'], $tagsPermitidas);
     $comentario =  htmlspecialchars($comentario);
