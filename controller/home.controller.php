@@ -1,13 +1,14 @@
 <?php
 require_once(__DIR__."/../includes.php");
 require_once(__DIR__."/../protect.php");
-require_once("../Daofactory/usuarios.php");
-require_once("../Daofactory/post.php");
-require_once("../Daofactory/amizade.php");
+require_once(__DIR__."/../Daofactory/usuarios.php");
+require_once(__DIR__."/../Daofactory/post.php");
+require_once(__DIR__."/../Daofactory/amizade.php");
 
 
 //Carrega os posts dos amigos)
-$amigos = Amizade::getAmizadesByUsuarioId($_SESSION['id']);
+$usuario_id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
+$amigos = Amizade::getAmizadesByUsuarioId($usuario_id);
 
 $posts_dos_amigos = [];
 foreach($amigos as $amigo){

@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__."/../includes.php");
 require_once(__DIR__."/../protect.php");
-require_once("../../Daofactory/post.php");
+require_once(__DIR__."/../Daofactory/post.php");
 
 //Apagando post:
 if(isset($_POST['PostId'])) {
@@ -14,4 +14,4 @@ if(isset($_POST['PostId'])) {
     //alert: algo deu errado
 }
 
-header("Location: ../home.php");
+header("Location: ./meus_posts.php");
