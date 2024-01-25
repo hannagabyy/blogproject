@@ -55,11 +55,12 @@ class Usuarios {
         }
     }
 
-    public static function updateUsuarios($id, $email, $usuario, $senha){
+    public static function updateUsuarios($id, $email, $usuario, $senha, $foto){
         global $mysqli;
 
         $email = $mysqli->real_escape_string($email);
         $usuario = $mysqli->real_escape_string($usuario);
+        $foto = $mysqli->real_escape_string($foto);
 
         $atualizacao="";
         
@@ -81,6 +82,14 @@ class Usuarios {
             }
 
             $atualizacao .= " senha='".$senha."'";
+        }
+
+        if(!empty($foto)){
+            if(!empty($atualizacao)){
+                $atualizacao .= ",";
+            }
+
+            $atualizacao .= " foto='".$foto."'";
         }
 
         $mysqli->begin_transaction();
@@ -131,6 +140,27 @@ class Usuarios {
         $row = $sql_query->fetch_all(MYSQLI_ASSOC);
 
         return $row;
+    }
+
+    public static function atualiza_foto($path_foto, $id){
+        global $mysqli;
+
+        $path_foto = $mysqli->real_escape_string($path_foto);
+        
+        $mysqli->begin_transaction();
+        
+        try{  
+            $sql_code = "UPDATE usuarios SET ".$path_foto." where id=? ";
+            $stmt = $mysqli->prepare($sql_code);
+            $stmt->bind_param('si', $path_foto, $id);
+            $stmt->execute();
+        
+            $mysqli->commit();
+
+        }catch(mysqli_sql_exception $exception) {
+            $mysqli->rollback();
+    
+        }
     }
 
 }
