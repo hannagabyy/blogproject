@@ -15,7 +15,7 @@
                 <p class="nome-usuario"><?= $usuario_nome ?></p>
             </div>
             
-            <div class="d-flex flex-column mt-5">
+            <div class="d-flex flex-column mt-5 meu-post-mobile">
                 <div class="d-flex p-4 justify-content-end">
                     <div>
                         <button class="d-flex align-items-center mx-1 btn bg-primary text-light" value="<?=$post['id']?>" onclick="editarPost(this.value, event)"><img class="icones-botoes m-1" src="../../imagens/edit-icon.svg">Editar</button>
