@@ -11,7 +11,7 @@
         <div class="d-flex flex-column">
         <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
             <div class="d-flex flex-column justify-content-center align-items-center me-5">
-                <div id="fotoUsuario" class="fotoUsuario"></div>
+                <div id="fotoUsuario" class="fotoUsuario"><img src="../../<?= $foto_perfil ?>" style="width: 100%;"></div>
                 <p class="nome-usuario"><?= $usuario_nome ?></p>
             </div>
             

@@ -11,6 +11,8 @@ $amigos_encontrados = Amizade::getAmizadesByUsuarioId($usuario_id);
 $amigos = [];
 foreach($amigos_encontrados as $amigo_encontrado){
     $amigo = Usuarios::getUsuariosById($amigo_encontrado['usuarioId']);
+    $amigo['foto'] = (!is_null($amigo['foto']))? $amigo['foto'] : 'imagens/default-user.jpg';
+
     array_push($amigos, $amigo);
 }
 
