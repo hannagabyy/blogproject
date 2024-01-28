@@ -22,9 +22,11 @@ class Amizade {
 
         $sql_code = "SELECT * FROM amizade where (usuario_id1='$usuario_id1' AND usuario_id2='$usuario_id2') OR (usuario_id1='$usuario_id2' AND usuario_id2='$usuario_id1') ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
-        $result = $sql_query->fetch_all();
+        if(!empty($sql_query->fetch_all())){
+            return true;
+        }
 
-        return $result; 
+        return false; 
     }
 
     public static function deleteAmizadeByUsuarioId($usuario_id) {
@@ -57,7 +59,8 @@ class Amizade {
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('ii', $usuario_id1, $usuario_id2);
             $stmt->execute();
-       
+            
+            $mysqli->commit();
             
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();

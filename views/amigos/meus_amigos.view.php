@@ -15,15 +15,17 @@
         <?php if (isset($amigos) && !empty($amigos)): ?>
                         
             <?php foreach ($amigos as $amigo): ?>
-                <div class="card-amigo-resultado d-flex flex-column">        
+                <div class="card-amigo-resultado d-flex flex-column" onmousemove="tooltip(event)">        
                     <div class="m-2 d-flex justify-content-between align-items-center mx-auto p-2 rounded card-amigo">
-                        <a href="../perfil.php?id=<?=$amigo['id']?>" target="_blank"><div class="fotoUsuario-busca-amigo bg-white rounded-circle"></div></a>
+                        <a href="../perfil.php?id=<?=$amigo['id']?>" target="_blank"><div class="fotoUsuario-busca-amigo bg-white rounded-circle">
+                            <img src="../../<?= $amigo['foto'] ?>" style="width: 100%;">
+                        </div></a>
                         <div class="d-flex flex-column justify-content-start align-itens-center informacoes-amigo">     
                             <a href="../perfil.php?id=<?=$amigo['id']?>" target="_blank"><p class="fs-3 card-nome"><?=$amigo['usuario']?></p></a>
                             <a href="../perfil.php?id=<?=$amigo['id']?>" target="_blank"><p class="fs-6lead text-center card-email"><?=$amigo['email']?></p></a>
                         </div>
                         <div>
-                            <span><img src="/blog_project/imagens/add-friend-icon.svg" class="icone-adicionar m-3"></span>
+                            <span><img src="/blog_project/imagens/added-friend-icon.svg" class="icone-adicionar m-3"></span>
                         </div>
                     </div>
                 </div>
@@ -39,7 +41,9 @@
         <?php endif; ?>
     
     </section>
-  
+
+    <div class="tooltip_">tooltip aqui</div>
+    
 </main>
 
 <?php include(__DIR__."/../../defaultHtmlEnd.php"); ?> 
