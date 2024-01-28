@@ -1,7 +1,7 @@
 
 .fotoUsuario{
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     max-width: 150px;
     max-height: 150px;
     border-radius: 50%;
@@ -23,12 +23,6 @@
         width: 600px;
     }
  }
-@media (max-width: 780px) {
-    /* .fotoUsuario{
-        max-width: 80px;
-        max-height: 80px;
-    } */
-  }
 
  @media screen and (min-width: 481px){
     .post-texto{

@@ -4,7 +4,7 @@
 
 <main class="col-md-10 mx-auto">
     <div class="d-flex flex-column justify-content-center align-items-center my-4 w-100 container-perfil">
-        <div id="fotoUsuario" class="fotoUsuario-perfil bg-white rounded-circle"><img src="../<?= $usuario['foto'] ?>" style="width: 100%;"></div>
+        <img id="fotoUsuario" class="fotoUsuario-perfil bg-white rounded-circle" src="../<?= $usuario['foto'] ?>">
         <div class="mx-auto w-100 div-inputs">
             <form action="" class="form mx-auto m-4">
                 <div class="d-flex justify-content-center align-items-center row-6 input-form__grupos">

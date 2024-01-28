@@ -52,7 +52,9 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                                         <li><a class="dropdown-item" href="/Blog_project/public/meu_perfil.php">Perfil</a></li>
-                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
                                         <li><a class="dropdown-item" href="\Blog_project\logout.php">Sair</a></li>
                                     </ul>
                                 </li>
