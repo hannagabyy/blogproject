@@ -6,7 +6,7 @@ require_once(__DIR__."/../Daofactory/post.php");
 require_once(__DIR__."/../Daofactory/amizade.php");
 
 
-//Carrega os posts dos amigos)
+//Carrega os posts dos amigos
 $usuario_id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 $amigos = Amizade::getAmizadesByUsuarioId($usuario_id);
 
