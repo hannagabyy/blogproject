@@ -17,7 +17,7 @@ class Usuarios {
 
         $email = $mysqli->real_escape_string($email);
 
-        $sql_code = "SELECT * FROM usuarios where email='$email' ";
+        $sql_code = "SELECT * FROM usuarios where email='$email' and `admin`= 0 ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $row = $sql_query->fetch_assoc();
 
@@ -29,7 +29,7 @@ class Usuarios {
 
         $usuario = $mysqli->real_escape_string($usuario);
         
-        $sql_code = "SELECT * FROM usuarios where usuario='$usuario' ";
+        $sql_code = "SELECT * FROM usuarios where usuario='$usuario' and `admin`= 0 ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $row = $sql_query->fetch_assoc();
 
@@ -161,6 +161,26 @@ class Usuarios {
             $mysqli->rollback();
     
         }
+    }
+
+    public static function getUsuarioMaster(){
+        global $mysqli;
+        
+        $sql_code = "SELECT * FROM usuarios where `admin`= 1";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $row = $sql_query->fetch_assoc();
+
+        return $row; 
+    }
+
+    public static function getAllUsuarios(){
+        global $mysqli;
+        
+        $sql_code = "SELECT * FROM usuarios where `admin`= 0";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $row = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $row; 
     }
 
 }

@@ -68,4 +68,14 @@ class Amizade {
         }
 
     }
+    
+    public static function getAllAmizades(){
+        global $mysqli;
+        
+        $sql_code = "SELECT * FROM Amizade";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $row = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $row; 
+    }
 }
