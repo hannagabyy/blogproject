@@ -76,7 +76,7 @@ class Post {
             $stmt->bind_param('si', $comentario, $usuarioId);
             $stmt->execute();
         
-            $mysqli->commit();
+            return $mysqli->commit();
 
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();

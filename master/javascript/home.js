@@ -1,6 +1,6 @@
 const listarUsuarios = document.getElementById('listar-usuarios');
 const verAmizades = document.getElementById('ver-amizades');
-// const lancarPublicacoes = document.getElementById('lancar-publicacoes');
+const lancarPublicacoes = document.getElementById('lancar-publicacoes');
 const listarPosts = document.getElementById('listar-posts');
 const tituloResultado = document.getElementById('titulo-resultado');
 const caixaDeResultado = document.getElementById('caixa-resultado');
@@ -24,11 +24,11 @@ verAmizades.addEventListener('click', function(){
     xhttp.send();
 });
 
-// lancarPublicacoes.addEventListener('click', function(){
-//     xhttp.open("POST", "../ajax/lancarPublicacoes.php");
-//     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//     xhttp.send("nomePesquisa="+nomePesquisa);
-// });
+lancarPublicacoes.addEventListener('click', function(){
+    xhttp.open("POST", "./ajax/lancarPublicacoes.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+});
 
 listarPosts.addEventListener('click', function(){
     xhttp.open("POST", "./ajax/listarPosts.php");
