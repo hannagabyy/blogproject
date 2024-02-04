@@ -10,6 +10,7 @@ if (isset($_SESSION['id'])){//alert você já está logado!
 }
 
 $erro_login ='';
+//verifica se o usuario e senha foram preenchidos
 if (isset($_POST['usuario']) || isset($_POST['senha'])){
     if (strlen(($_POST['usuario'])) == 0){
         $erro_login ='Preencha seu usuário!';
@@ -22,7 +23,8 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
         $senha = $_POST['senha'];
         
         $row = Usuarios::getUsuariosByUsuario($usuario);
-        
+
+        //buscar o usuario no banco e verifica se a senha está correta, após inicia a sessão
         if(isset($row) AND !empty($row)){  
             if (password_verify($senha, $row['senha'])){
                 $_SESSION['id'] = $row['id'];

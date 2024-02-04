@@ -8,6 +8,7 @@ require_once(__DIR__."/../Daofactory/amizade.php");
 $usuario_id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 $amigos_encontrados = Amizade::getAmizadesByUsuarioId($usuario_id);
 
+//busca os amigos atuais do usuário logado
 $amigos = [];
 foreach($amigos_encontrados as $amigo_encontrado){
     $amigo = Usuarios::getUsuariosById($amigo_encontrado['usuarioId']);
