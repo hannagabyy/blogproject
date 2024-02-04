@@ -5,8 +5,8 @@ require_once(__DIR__."/../Daofactory/usuarios.php");
 if(!isset($_SESSION)){
     session_start();
 }
-if (isset($_SESSION['id'])){
-    header("Location: ./public/home.php");
+if (isset($_SESSION['id'])){//alert você já está logado
+    header("Location: ./home.php");
 }
 
 $erro_msg ='';
@@ -26,6 +26,7 @@ if(isset($_POST['usuario']) && isset($_POST['senha'])){
         if($usuarioMaster['usuario'] == $usuario && password_verify($senha, $usuarioMaster['senha'])){//validação da senha e do nome do usuario master :)
             $_SESSION['id'] = $usuarioMaster['id'];
             $_SESSION['user'] = $usuarioMaster['usuario'];
+            $_SESSION['admin'] = true;
             header("Location: ./home.php");
 
         }else{          

@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . "/../../includes.php");
-require_once(__DIR__ . "/../../protect.php");
+require_once(__DIR__ . "/../protect.php");
 require_once(__DIR__."/../../Daofactory/usuarios.php");
 require_once(__DIR__."/../../Daofactory/amizade.php");
 

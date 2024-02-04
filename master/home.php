@@ -1,13 +1,7 @@
 <?php
 require_once(__DIR__."/../includes.php");
+require_once(__DIR__."/protect.php");
 
-if(!isset($_SESSION)){
-    session_start();
-}
-
-if (!isset($_SESSION['id'])){
-    die('você precisa estar logado para acessar está pagina!<p><a href="./index.php">Entrar</a></p>');
-}
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -34,6 +28,7 @@ if (!isset($_SESSION['id'])){
 
 <body>
     <h1 class="titulo-principal text-center display-2 mt-5 text-light">ADMIN</h1>
+    <a class="d-flex justify-content-end" href="../logout.php"><button class="me-5">Sair</button></a>
     <main class="d-flex w-50 mt-5 mx-auto justify-content-center flex-wrap">    
         <a id="listar-usuarios"><button class="w-50 m-5">Listar todos os Usuários</button></a>
         <a id="ver-amizades"><button class="w-50 m-5">Ver todas as amizades</button></a>

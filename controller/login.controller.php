@@ -28,6 +28,7 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['user'] = $row['usuario'];
                 $_SESSION['fotoPerfil'] = $row['foto'];
+                $_SESSION['admin'] = false;
               
                 echo "<script>mostrarAlertaSucesso('Login efetuado com sucesso!','./public/home.php')</script>";
 
