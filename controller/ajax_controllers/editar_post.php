@@ -14,7 +14,6 @@ if(!empty($postId)){
 
 }else{
     //erro
-    echo" n entarsjdfalksdjflaskfjaslfjsalkfjadsjsdlk";
 }
 
 
