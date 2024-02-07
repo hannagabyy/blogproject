@@ -7,6 +7,7 @@ require_once(__DIR__."/../../Daofactory/post.php");
 $usuarios = Usuarios::getAllUsuarios();
 
 $quantidade_desejada = 5;//quantidade de publicações a serem lançadas
+$privacidade = 'publico';
 
 $comentarios_predefinidos = [
     "Refletindo sobre as pequenas vitórias diárias. Às vezes, são os momentos simples que fazem a vida incrível. #Gratidão",
@@ -68,7 +69,7 @@ for($i=1; $i <= $quantidade_desejada; $i++){
 
     $usuario_id = $usuarios[$usuario_sorteado]['id'];
 
-    $resultado = Post::insertPost($comentarios_predefinidos[$comentario_sorteado], $usuario_id);
+    $resultado = Post::insertPost($comentarios_predefinidos[$comentario_sorteado], $usuario_id, $privacidade);
 
     if($resultado){
         echo "<div>um post inserido para o usuario: ".$usuarios[$usuario_sorteado]['usuario']." !</div>";

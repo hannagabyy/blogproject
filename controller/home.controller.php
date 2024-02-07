@@ -10,10 +10,13 @@ require_once(__DIR__."/../Daofactory/amizade.php");
 $usuario_id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 $amigos = Amizade::getAmizadesByUsuarioId($usuario_id);
 
-$posts_dos_amigos = [];
-foreach($amigos as $amigo){
-    $usuario_nome = Usuarios::getUsuariosById($amigo['usuarioId'])['usuario'];
-    $posts_dos_amigos[$usuario_nome] = Post::getPostByUsuarioId($amigo['usuarioId']);
-    
+$amigos_ids = array();
+foreach ($amigos as $amigo){
+    array_push($amigos_ids, $amigo['usuarioId']);
 }
 
+$posts_dos_amigos = Post::getPostsDosAmigos($amigos_ids);
+foreach ($posts_dos_amigos as  $post_do_amigo){
+    $post_do_amigo['foto'] = (!is_null($post_do_amigo['foto']))? $post_do_amigo['foto'] : 'imagens/default-user.jpg';
+
+}

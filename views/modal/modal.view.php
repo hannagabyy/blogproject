@@ -9,6 +9,10 @@
                     <div class="col form-group">
                         <textarea name="editor" id="editor" placeholder="Oque você está pensando ?"></textarea>
                     </div>
+                    <select name="privacidade">
+                        <option value="1">Público</option>
+                        <option value="2">Privado</option>
+                    </select>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary col-2 botao__postar btn text-white d-flex justify-content-center align-items-center">Postar <img class="ms-2" src="\Blog_project\imagens\correct-icon.svg" alt="Ícone de correto no botão de postar"> </button>

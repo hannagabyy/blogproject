@@ -8,13 +8,11 @@
 
     <?php if ($posts_dos_amigos) { ?>
         <div class="d-flex flex-column ">
-            <?php foreach ($posts_dos_amigos as $nome => $posts) :
-                foreach ($posts as $post) : ?>
-
+            <?php foreach ($posts_dos_amigos as $post): ?>
                     <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
-                        <div class="d-flex flex-column justify-content-center align-items-center  me-5">
-                            <div id="fotoUsuario" class="fotoUsuario"></div>
-                            <p class="nome-usuario"><?= $nome ?></p>
+                        <div class="d-flex flex-column justify-content-center align-items-center  me-5">                           
+                            <img id="fotoUsuario" class="fotoUsuario" src="../<?= $post['foto'] ?>">
+                            <p class="nome-usuario"><?= $post['usuario'] ?></p>
                         </div>
 
                         <div class="d-flex flex-column mt-5">
@@ -23,13 +21,15 @@
                             </div>
                         </div>
                     </div>
-            <?php endforeach;
-            endforeach; ?>
-        </div> <?php
+            <?php endforeach; ?>
+        </div>
 
-            } else {
-                echo "Nenhum post no momento!";
-            } ?>
+    <?php
+
+        } else {
+            echo "Nenhum post no momento!";
+        } 
+    ?>
 
 </main>
 
