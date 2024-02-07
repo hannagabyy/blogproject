@@ -6,7 +6,7 @@
 
     <a id="botao__abrir_modal" class="mb-3 mt-5 btn text-white botao__novoPost d-flex justify-content-end align-items-center position-relative m-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Novo Post <img class="m-1" src="../imagens/plus-icon.svg" alt="Icone de mais"> </a>
 
-    <?php if ($posts_dos_amigos) { ?>
+    <?php if (isset($posts_dos_amigos) && !empty($posts_dos_amigos)) { ?>
         <div class="d-flex flex-column ">
             <?php foreach ($posts_dos_amigos as $post): ?>
                     <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
