@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <div>
-                            <span><img src="/blog_project/imagens/added-friend-icon.svg" class="icone-adicionar m-3"></span>
+                            <span><img src="/blog_project/imagens/added-friend-icon.svg" class="icone-adicionar m-3" data-usuarioId="<?=$amigo['id']?>" onclick="atualizaAmizade(this)"></span>
                         </div>
                     </div>
                 </div>

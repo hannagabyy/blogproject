@@ -10,7 +10,7 @@ require_once(__DIR__."/../Daofactory/amizade.php");
 $usuario_id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
 $amigos = Amizade::getAmizadesByUsuarioId($usuario_id);
 
-if(!empty($amigo)){
+if(!empty($amigos)){
     $amigos_ids = array();
     foreach ($amigos as $amigo){
         array_push($amigos_ids, $amigo['usuarioId']);
