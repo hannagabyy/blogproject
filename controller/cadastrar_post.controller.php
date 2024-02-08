@@ -29,14 +29,13 @@ if(isset($_POST['editor'], $_POST['privacidade'])) {
         $resultado = Post::insertPost($comentario, $usuarioId, $privacidade);
     }
    
+    if(isset($resultado)){
+        // echo "inserido com sucesso";
+    
+    }else{ 
+        // echo "falhou";
+    
+    }  
+
+    header("location:".$_SERVER['HTTP_REFERER']);
 }
-
-if(isset($resultado)){
-    // echo "inserido com sucesso";
-
-}else{
-    // echo "falhou";
-
-}  
-
-header("Location: ../home.php");
