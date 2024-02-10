@@ -29,15 +29,15 @@ class Amizade {
         return false; 
     }
 
-    public static function deleteAmizadeByUsuarioId($usuario_id) {
+    public static function deleteAmizade($usuario_id, $amigo_id) {
         global $mysqli;
         
         $mysqli->begin_transaction();
         
         try{            
-            $sql_code = "DELETE FROM amizade where usuario_id1 = ? OR usuario_id2 = ? ";
+            $sql_code = "DELETE FROM amizade where (usuario_id1 = ? AND usuario_id2 = ?) OR (usuario_id2 = ? AND usuario_id1 = ?)";
             $stmt = $mysqli->prepare($sql_code);
-            $stmt->bind_param('ii', $usuario_id, $usuario_id);
+            $stmt->bind_param('iiii', $usuario_id, $amigo_id, $usuario_id, $amigo_id);
             $stmt->execute();
         
             $mysqli->commit();

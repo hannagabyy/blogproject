@@ -4,9 +4,9 @@ require_once(__DIR__."/../protect.php");
 require_once(__DIR__."/../Daofactory/post.php");
 
 //Apagando post:
-if(isset($_POST['PostId'])) {
-    $id = $_POST['PostId'];
+$id = filter_input(INPUT_POST, 'PostId', FILTER_VALIDATE_INT);
 
+if(isset($id)) {
     Post::deletePostById($id);
     sleep(1);
 
