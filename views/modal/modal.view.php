@@ -7,7 +7,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col form-group">
-                        <textarea name="editor" id="editor" placeholder="Oque você está pensando ?"></textarea>
+                        <textarea name="editor" id="editor"  placeholder="Oque você está pensando ?"></textarea>
                     </div>
                     <select name="privacidade">
                         <option value="1">Público</option>
@@ -15,6 +15,8 @@
                     </select>
                 </div>
                 <div class="modal-footer">
+                    
+                    <div id="count-caracter"></div>
                     <button type="submit" class="btn btn-primary col-2 botao__postar btn text-white d-flex justify-content-center align-items-center">Postar <img class="ms-2" src="\Blog_project\imagens\correct-icon.svg" alt="Ícone de correto no botão de postar"> </button>
                 </div>
             </form>

@@ -1,4 +1,6 @@
-
+.ck-content{
+    color: #525252!important;
+}
 .modal-header,.input__post,.modal-footer{
     border: none;
 } 

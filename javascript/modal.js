@@ -1,3 +1,4 @@
+
 let abrirModal = document.getElementById('botao__abrir_modal');
 abrirModal.addEventListener('click', function() {
     criarModal('editor');
@@ -32,9 +33,32 @@ function criarModal(editorId){
 			],
 			shouldNotGroupWhenFull: false
 		}
-	})
+	}) 
 	.then( editor => {
-			console.log( editor );
+		console.log('editor criado com sucesso');
+		// const limite = 10;
+		// let contagem = document.getElementById('count-caracter');
+		// contagem.textContent = 0 + "/" + limite;
+
+		// editor.model.document.on('change:data', () => {
+        //     const text = editor.getData();
+        //     contagem.textContent = text.length + "/" + limite;
+        //     // Verifica se o texto excede o limite
+        //     if (text.length > limite) {
+        //         // Se exceder, corta o texto para o limite e descarta o restante
+        //         contagem.style.color = "#ff2851";
+
+		// 		const textoAceito = text.slice(0, limite);
+        //         console.log(textoAceito);
+		// 		text = textoAceito;
+        //         // editor.model.change(writer => {
+        //         //     writer.setData(textoAceito);
+        //         // });
+				
+        //     }else{
+		// 		contagem.style.color = "#737373";
+		// 	}
+        // });
 	} )
 	.catch( error => {
 			console.log( error );

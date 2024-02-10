@@ -3,7 +3,7 @@ require_once(__DIR__."/../includes.php");
 require_once(__DIR__."/../protect.php");
 require_once(__DIR__."/../Daofactory/usuarios.php");
 require_once(__DIR__."/../Daofactory/post.php");
-
+debug($_POST);
 
 //Criação do post:
 if(isset($_POST['editor'], $_POST['privacidade'])) {
@@ -29,6 +29,8 @@ if(isset($_POST['editor'], $_POST['privacidade'])) {
         $resultado = Post::insertPost($comentario, $usuarioId, $privacidade);
     }
    
+} else{
+    
 }
 
 if(isset($resultado)){
@@ -39,4 +41,4 @@ if(isset($resultado)){
 
 }  
 
-header("Location: ../home.php");
+// header("Location: ../home.php");

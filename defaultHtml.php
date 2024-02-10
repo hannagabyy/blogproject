@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="\blog_project\style\style.css">
     <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
@@ -43,9 +43,15 @@
 
                     </ul>
                     <div class="offcanvas-body">
+                        <p class="nome-usuario-nav"> Olá, Ana Laura!</p>
+
+
                         <ul class="navbar-nav">
+
                             <div class="dropdown">
+
                                 <li class="nav-item dropdown bg-dark">
+
                                     <a class="nav-link dropdown-toggle text-light btn bg-secondary badge " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="fa-solid fa-gear" style="color: #fff;"></i>
                                         Configurações

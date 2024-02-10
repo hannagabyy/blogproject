@@ -56,3 +56,47 @@ if(botoesApagar!== null){
     });
   });
 }
+
+function toastMessagem(icone,mensagem,cor){
+  let divMessage = document.createElement("div");
+  divMessage.classList.add("position-fixed", "bottom-0", "end-0", "p-3");
+  divMessage.style.zIndex = "11";
+
+  // Define o HTML interno da div
+  divMessage.innerHTML = `
+    <div id="liveToast" class="toast bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header bg-dark text-light">
+        <i class="icone-toast fa-solid ${icone} mx-1"></i>
+        <strong class="me-auto"> Mensagem </strong>
+        <small>Segundos atrás</small>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        ${mensagem}
+      </div>
+    </div>
+  `;
+  document.body.appendChild(divMessage);
+
+
+
+  let toastLiveMensagem = document.getElementById('liveToast');
+  let toast = new bootstrap.Toast(toastLiveMensagem);
+  let iconeToast = document.querySelector('.icone-toast ');
+  iconeToast.style.color = cor;
+
+  toast.show()        
+  
+}
+
+//criando hover
+var btnHover = document.querySelector('.btn-submit');
+if(btnHover){
+  btnHover.onmousemove = function(e){
+    var x = e.pageX - btnHover.offsetLeft;
+    var y = e.pageY - btnHover.offsetTop;
+
+    btnHover.style.setProperty('--eixoX',x + 'px');
+    btnHover.style.setProperty('--eixoY',y + 'px') 
+  }
+}

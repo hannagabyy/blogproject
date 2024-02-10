@@ -6,7 +6,7 @@
     height: 5rem;
 }
 .input-editar, .input-editar:focus{
-    background-color: var(--fundo-crinza);
+    background-color: var(--fundo-input);
     border: none;
     color: white!important;
 }

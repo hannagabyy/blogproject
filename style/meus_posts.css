@@ -1,5 +1,12 @@
+.publicacaoUsuario{
+    color: #525252;
+}
 .icones-botoes{
     width: 20px;
+}
+.nome-usuario{
+    font-weight: 600;
+    text-transform: capitalize;
 }
 .nome-usuario,.fotoUsuario{
     margin-right: 3rem !important;;
