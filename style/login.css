@@ -16,6 +16,7 @@ input:focus{
     background-color: var(--fundo-input)!important;
     color: white!important;
     outline: none!important;
+    box-shadow: none!important;
 }
 
 input:-webkit-autofill {
