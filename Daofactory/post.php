@@ -52,12 +52,16 @@ class Post {
             $sql_code = "DELETE FROM post where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('i', $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
     }
@@ -73,12 +77,16 @@ class Post {
             $sql_code = "UPDATE post SET comentario=? where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('si', $comentario, $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
        
@@ -95,12 +103,16 @@ class Post {
             $sql_code = "INSERT INTO post(comentario, usuarioId, privacidade) VALUES (?, ?, ?)"; 
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('sis', $comentario, $usuarioId, $privacidade);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
-            return $mysqli->commit();
+            $mysqli->commit();
+
+            return $resultado;
 
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         } 
     }

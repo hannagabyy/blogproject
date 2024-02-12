@@ -45,12 +45,16 @@ class Usuarios {
             $sql_code = "DELETE FROM usuarios where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('i', $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
     }
@@ -98,12 +102,16 @@ class Usuarios {
             $sql_code = "UPDATE usuarios SET ".$atualizacao." where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('i', $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
        
@@ -120,13 +128,16 @@ class Usuarios {
             $sql_code = "INSERT INTO usuarios(email, usuario, senha) VALUES (?, ?, ?)"; 
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('sss', $email, $usuario, $senha);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
-    
+
+            return false;    
         } 
     }
 
@@ -153,12 +164,16 @@ class Usuarios {
             $sql_code = "UPDATE usuarios SET ".$path_foto." where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('si', $path_foto, $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
     }
