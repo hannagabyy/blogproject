@@ -43,7 +43,7 @@
 
                     </ul>
                     <div class="offcanvas-body">
-                        <p class="nome-usuario-nav"> Olá, Ana Laura!</p>
+                        <p class="nome-usuario-nav"> Olá, <?= $_SESSION['user'] ?> !</p>
 
 
                         <ul class="navbar-nav">
