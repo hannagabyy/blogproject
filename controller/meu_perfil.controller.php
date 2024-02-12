@@ -62,7 +62,7 @@ if($_POST){
     //salvando os dados editados
     Usuarios::updateUsuarios($id, $alteracoes['email'], $alteracoes['usuario'], $alteracoes['senha'], $alteracoes['fotoPerfil']);
     
-    // header("Location: ./meu_perfil.php");
+    header("Location: ./meu_perfil.php");
 }
 
 
