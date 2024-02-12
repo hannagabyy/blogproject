@@ -36,7 +36,7 @@
                     <label for="inputSenha" class="form-label text-light fs-6">Senha</label>
                     <div class="input-group">
                         <span class="input-group-text" style="background-color:#252A34;" id="basic-addon2"><i class="fa-solid fa-lock" style="color: white;"></i></span>
-                        <input type="password" class="form-control" name="senha" required>
+                        <input type="password" class="form-control" name="senha" required autocomplete="new-password"/>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center"><button type="submit" name="submit" class="btn btn-submit mt-4 btn-cadastrar" ><span>Cadastrar</span></button></div>

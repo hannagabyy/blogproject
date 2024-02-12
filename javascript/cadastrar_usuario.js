@@ -4,14 +4,15 @@ formularioCadastrar.addEventListener('submit',function (e){
     const xhttp = new XMLHttpRequest();
     let formData = new FormData(formularioCadastrar);
     let formulario = Object.fromEntries(formData);
-   
-    console.log(Object.fromEntries(formData));
 
     xhttp.onload = function() {
-        //implementar a lógica de salvar o usuário aqui
-        console.log(this.responseText);
-        if(false){
-            toastMessagem('fa-square-check','Usuário criado com sucesso!', '#63E6BE');
+        let resultado = this.responseText;
+
+        if(resultado == true){
+            toastMessagem('fa-square-check','Usuário criado com sucesso, você será redirecionado!', '#63E6BE');
+            setTimeout(function () {
+                window.location.href="../index.php";
+            }, 2500);          
         }else{
             toastMessagem('fa-triangle-exclamation','Algo deu errado, tente novamente!','red');
         }
@@ -21,4 +22,4 @@ formularioCadastrar.addEventListener('submit',function (e){
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(`email=${formulario['email']}&usuario=${formulario['usuario']}&senha=${formulario['senha']}`);
     
-})
+});
