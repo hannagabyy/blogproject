@@ -15,6 +15,3 @@ if(!empty($postId)){
 }else{
     //erro
 }
-
-
-

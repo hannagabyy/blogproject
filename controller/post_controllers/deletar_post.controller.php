@@ -1,7 +1,7 @@
 <?php
-require_once(__DIR__."/../includes.php");
-require_once(__DIR__."/../protect.php");
-require_once(__DIR__."/../Daofactory/post.php");
+require_once(__DIR__."/../../includes.php");
+require_once(__DIR__."/../../protect.php");
+require_once(__DIR__."/../../Daofactory/post.php");
 
 //Apagando post:
 $id = filter_input(INPUT_POST, 'PostId', FILTER_VALIDATE_INT);

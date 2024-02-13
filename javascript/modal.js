@@ -105,7 +105,7 @@ function salvarEdicao(postId, event){
 
 	const xhttp = new XMLHttpRequest();
 	xhttp.onload = function() {
-		window.alert('salvo com sucesso');	
+		// window.alert('salvo com sucesso');	
 		location.reload();	
 	}
 

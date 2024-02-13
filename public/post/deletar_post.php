@@ -1,2 +1,2 @@
 <?php
-include(__DIR__.'/../../controller/deletar_post.controller.php');
+include(__DIR__.'/../../controller/post_controllers/deletar_post.controller.php');
