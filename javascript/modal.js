@@ -117,3 +117,4 @@ function salvarEdicao(postId, event){
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("postId="+postId+"&comentario="+comentarioConcatenado);
 }
+

@@ -9,10 +9,12 @@
                     <div class="col form-group">
                         <textarea name="editor" id="editor"  placeholder="Oque você está pensando ?"></textarea>
                     </div>
-                    <select name="privacidade">
-                        <option value="1">Público</option>
-                        <option value="2">Privado</option>
+                    <select name="privacidade" class="privacidade-post">
+                     <option value="2" >Privado</option>
+                    <option value="1" >Público</option>
+                        
                     </select>
+                    
                 </div>
                 <div class="modal-footer">
                     
