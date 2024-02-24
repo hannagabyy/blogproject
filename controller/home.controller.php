@@ -4,6 +4,7 @@ require_once(__DIR__."/../protect.php");
 require_once(__DIR__."/../Daofactory/usuarios.php");
 require_once(__DIR__."/../Daofactory/post.php");
 require_once(__DIR__."/../Daofactory/amizade.php");
+require_once(__DIR__."/../Daofactory/reacao.php");
 
 
 //Carrega os posts dos amigos
@@ -21,4 +22,6 @@ if(!empty($amigos)){
         $post_do_amigo['foto'] = (!is_null($post_do_amigo['foto']))? $post_do_amigo['foto'] : 'imagens/default-user.jpg';
 
     }
+    $reacoes = Reacao::getAllReacoes();
+    $reacoes = array_column($reacoes, 'codigo');
 }

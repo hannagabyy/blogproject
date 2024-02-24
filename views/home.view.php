@@ -24,41 +24,14 @@
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <ul class="reacoes animate__animated">
-                                <li>
-                                    <div class="iconbutton">
-                                        <i class="fa-brands animate__animated animate__slideInRight " style="color:Red">&#x2764</i>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="iconbutton">
-                                        <i class="fa-brands animate__animated animate__slideInRight">&#x1F602</i>
-                                    </div>
-
-                                </li>
-
-                                <li>
-                                    <div class="iconbutton ">
-                                        <i class="fab animate__animated animate__slideInRight">&#x1F62E</i>
-                                    </div>
-
-                                </li>
-
-                                <li>
-                                    <div class="iconbutton ">
-                                        <i class="fab animate__animated animate__slideInRight">&#X1F62D</i>
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <div class="iconbutton ">
-                                        <i class="fab animate__animated animate__slideInRight">&#x1F620</i>
-                                    </div>
-
-                                </li>
-
-
-                        </ul>
+                                <?php foreach($reacoes as $reacao):?>
+                                    <li>
+                                        <div class="iconbutton">
+                                            <i class="fa-brands animate__animated animate__slideInRight " style="color:Red"><?=$reacao?></i>
+                                        </div>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                         
 
