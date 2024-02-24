@@ -28,7 +28,48 @@
 
                 <div id="<?="comentarioId".$post['id']?>" class="publicacaoUsuario mx-auto p-4 overflow-y-auto overflow-x-hidden text-start post-texto">
                     <?= html_entity_decode($post['comentario']) ?>
-                </div>         
+                </div> 
+                <div class="fab-container">
+                            <div class="button-reagir iconbutton">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <ul class="reacoes animate__animated">
+                                <li>
+                                    <div class="iconbutton">
+                                        <i class="fa-brands animate__animated animate__slideInRight ">&#x2764</i>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="iconbutton">
+                                        <i class="fa-brands animate__animated animate__slideInRight">&#x1F602</i>
+                                    </div>
+
+                                </li>
+
+                                <li>
+                                    <div class="iconbutton animate__animated animate__slideInRight">
+                                        <i class="fab ">&#x1F62E</i>
+                                    </div>
+
+                                </li>
+
+                                <li>
+                                    <div class="iconbutton animate__animated animate__slideInRight">
+                                        <i class="fab ">&#X1F62D</i>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="iconbutton animate__animated animate__slideInRight">
+                                        <i class="fab ">&#x1F620;</i>
+                                    </div>
+
+                                </li>
+
+
+                        </ul>
+                        </div>        
             </div>            
         </div>
 
