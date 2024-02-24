@@ -9,11 +9,15 @@ function fechaModalAberto(){
 	const editor = document.querySelector('.ck-editor');
 
 	if (editor){//apaga o que já estiver aberto
-		let comentarioEscondido = document.querySelector('.comentario_escondido');
 		editor.remove();
-		botaoSalvarEdicao.remove();
-		comentarioEscondido.removeAttribute('style');
-		comentarioEscondido.classList.remove('comentario_escondido');		
+		
+		//fecha modal de edição se já estiver aberto
+		let comentarioEscondido = document.querySelector('.comentario_escondido');
+		if(comentarioEscondido){
+			botaoSalvarEdicao.remove();
+			comentarioEscondido.removeAttribute('style');
+			comentarioEscondido.classList.remove('comentario_escondido');
+		}				
 	}
 }
 
