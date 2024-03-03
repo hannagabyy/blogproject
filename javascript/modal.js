@@ -41,7 +41,7 @@ function criarModal(editorId){
 		let contagem = document.getElementById('count-caracter');
 		let tamanhoPost = '';
 		let formModal = document.getElementById('form-modal');
-		const limite = 100;
+		const limite = 300;
 
 		contagem.textContent = 0 + "/" + limite;
 		
@@ -136,4 +136,7 @@ function validarForm(formModal,limite,tamanhoPost){
 	}
 }
 
+function desabilitarBotao() {
+	document.getElementById("submitPost").disabled = true;
+}
 
