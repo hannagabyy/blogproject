@@ -19,10 +19,12 @@
     margin-top: 1rem;
     display: flex;
     width: 10rem;
-    padding: 8px;
+    padding: 4px;
     border-radius: 4px;
 }
-
+.editor[type="text"]{
+    width: 10ch;
+}
 
 @media screen and (max-width:480px){
     .botao__postar{

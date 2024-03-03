@@ -1,14 +1,39 @@
+.div-inputs{
+    width: 50rem!important;
+}
 .editar-foto-perfil{
     cursor: pointer;
 }
 .fotoUsuario-perfil{
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
+}
+.form-label{
+    font-size: 15px;
+}
+.label-amigos{
+    color: orange!important;
+}
+.input-editar{
+    text-wrap: nowrap!important;
 }
 .input-editar, .input-editar:focus{
     background-color: var(--fundo-input);
     border: none;
     color: white!important;
+}
+.dados-amigo{
+    text-align: start;
+    padding-left: 4px;
+}
+.sobre-mim{
+    width: 50rem;
+    resize:none;
+    text-wrap:wrap!important;
+}
+.sobre-mim-amigo{
+
+    width: 30rem;
 }
 
 @media screen and (max-width:480px){
@@ -25,6 +50,20 @@
     }
     .editar-foto-perfil{
         margin-bottom: 1rem;
+    }
+    .sobre-mim{
+        width: 15rem;
+    }
+    .div-inputs{
+        justify-content: center;
+        align-items: center;
+        margin: 4px auto;
+    }
+    
+ }
+ @media screen and (min-width:1025px){
+    .sobre-mim{
+        width: 40rem !important;
     }
     
  }

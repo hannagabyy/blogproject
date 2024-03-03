@@ -1,4 +1,3 @@
-
 let abrirModal = document.getElementById('botao__abrir_modal');
 abrirModal.addEventListener('click', function() {
     criarModal('editor');
@@ -39,30 +38,33 @@ function criarModal(editorId){
 		}
 	}) 
 	.then( editor => {
-		console.log('editor criado com sucesso');
-		// const limite = 10;
-		// let contagem = document.getElementById('count-caracter');
-		// contagem.textContent = 0 + "/" + limite;
+		let contagem = document.getElementById('count-caracter');
+		let tamanhoPost = '';
+		let formModal = document.getElementById('form-modal');
+		const limite = 100;
 
-		// editor.model.document.on('change:data', () => {
-        //     const text = editor.getData();
-        //     contagem.textContent = text.length + "/" + limite;
-        //     // Verifica se o texto excede o limite
-        //     if (text.length > limite) {
-        //         // Se exceder, corta o texto para o limite e descarta o restante
-        //         contagem.style.color = "#ff2851";
+		contagem.textContent = 0 + "/" + limite;
+		
+		editor.model.document.on('change:data', () => {
+		let texto =  editor.getData().replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ') ;
+		tamanhoPost = texto.length;
+		
+		contagem.textContent = tamanhoPost + "/" + limite;
 
-		// 		const textoAceito = text.slice(0, limite);
-        //         console.log(textoAceito);
-		// 		text = textoAceito;
-        //         // editor.model.change(writer => {
-        //         //     writer.setData(textoAceito);
-        //         // });
-				
-        //     }else{
-		// 		contagem.style.color = "#737373";
-		// 	}
-        // });
+		if (tamanhoPost >= limite){
+			contagem.style.color = "#ff2851";
+	
+		}else{
+			contagem.style.color = 'green';
+		}
+		})
+		
+		formModal.addEventListener('submit',(e)=>{
+			e.preventDefault();
+			validarForm(formModal,limite,tamanhoPost);
+		})
+
+		
 	} )
 	.catch( error => {
 			console.log( error );
@@ -121,4 +123,17 @@ function salvarEdicao(postId, event){
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("postId="+postId+"&comentario="+comentarioConcatenado);
 }
+
+function validarForm(formModal,limite,tamanhoPost){
+
+	if (tamanhoPost == 0){
+		mostrarAlertaErro(`Não foi possível salvar seu post ele esta vazio!`);
+	}
+	else if (tamanhoPost > limite){	
+		mostrarAlertaErro(`Não foi possível salvar seu post pois ele excede o limite de ${limite} caracteres!`);
+	}else{
+		formModal.submit();
+	}
+}
+
 

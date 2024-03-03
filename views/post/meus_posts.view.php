@@ -12,7 +12,8 @@
         <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <img id="fotoUsuario" class="fotoUsuario" src="../../<?= $foto_perfil ?>">
-                <p class="nome-usuario"><?= $usuario['usuario'] ?></p>
+                <p class="nome-usuario"><?= $usuario_nome ?></p>
+
             </div>
             
             <div class="d-flex flex-column mt-5 meu-post-mobile">
