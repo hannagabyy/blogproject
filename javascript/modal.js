@@ -46,17 +46,17 @@ function criarModal(editorId){
 		contagem.textContent = 0 + "/" + limite;
 		
 		editor.model.document.on('change:data', () => {
-		let texto =  editor.getData().replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ') ;
-		tamanhoPost = texto.length;
-		
-		contagem.textContent = tamanhoPost + "/" + limite;
+			let texto =  editor.getData().replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ') ;
+			tamanhoPost = texto.length;
+			
+			contagem.textContent = tamanhoPost + "/" + limite;
 
-		if (tamanhoPost >= limite){
-			contagem.style.color = "#ff2851";
-	
-		}else{
-			contagem.style.color = 'green';
-		}
+			if (tamanhoPost >= limite){
+				contagem.style.color = "#ff2851";
+		
+			}else{
+				contagem.style.color = 'green';
+			}
 		})
 		
 		formModal.addEventListener('submit',(e)=>{
