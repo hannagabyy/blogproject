@@ -19,10 +19,10 @@
 
 <body>
     <script src="https://kit.fontawesome.com/a679630483.js" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg nav-bar-light bg-transparent menu-nav w-100 ">
+    <nav class="navbar navbar-expand-lg nav-bar-dark bg-transparent menu-nav w-100 ">
         <div class="container-fluid fs-4">
             <a class="text-logo navbar-brand fs-1 text-light" href="#">Blog</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-bars" style="color: #ecedef;"></i></span>
             </button>
 

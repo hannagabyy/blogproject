@@ -25,6 +25,10 @@
 .editor[type="text"]{
     width: 10ch;
 }
+.modal-content *{
+    background-color: var(--fundo-input)!important;
+    color: white!important;
+}
 
 @media screen and (max-width:480px){
     .botao__postar{

@@ -6,7 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-ajax-uploader/2.6.7/SimpleAjaxUploader.min.js"></script>
     <script src="\Blog_project\javascript\alertas.js"></script>
     <script src="\Blog_project\javascript\animacoes.js"></script>
-    
+
     
     </body>
 

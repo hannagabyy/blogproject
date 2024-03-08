@@ -2,8 +2,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <form data-target="#exampleModal" id="form-modal" method="post" onsubmit="desabilitarBotao()" action="\Blog_project\public\post\cadastrar_post.php">
-                <div class="modal-header">
-                    <button type="button" class="btn-close text-orange" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header" >
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="col form-group">

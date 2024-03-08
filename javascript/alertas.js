@@ -1,9 +1,11 @@
 function mostrarAlertaErro(mensagem) {
+  
   Swal.fire({
     title: 'Erro!',
     text: mensagem,
     icon: 'error'
   });
+  document.body.classList.remove('swal2-height-auto');
 }
 
 // Função para alerta de confirmação
@@ -33,11 +35,13 @@ function mostrarAlertaSucesso(mensagem,redirect=null) {
     icon: 'success',
     showConfirmButton:false
   });
+  document.body.classList.remove('swal2-height-auto');
   if(redirect){
     setTimeout(function () {
       window.location.href = redirect;
     }, 1000);
   }
+  
 }
 
 
@@ -95,6 +99,7 @@ if(btnHover){
   btnHover.onmousemove = function(e){
     var x = e.pageX - btnHover.offsetLeft;
     var y = e.pageY - btnHover.offsetTop;
+    
 
     btnHover.style.setProperty('--eixoX',x + 'px');
     btnHover.style.setProperty('--eixoY',y + 'px') 

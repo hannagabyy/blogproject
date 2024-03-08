@@ -1,5 +1,14 @@
 .div-inputs{
-    width: 50rem!important;
+    width: 300px;
+}
+.div-editar-meu-perfil{
+    width: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    padding: 4px;
 }
 .editar-foto-perfil{
     cursor: pointer;
@@ -9,36 +18,70 @@
     height: 10rem;
 }
 .form-label{
-    font-size: 15px;
+    font-size: 1rem;
 }
 .label-amigos{
     color: orange!important;
 }
 .input-editar{
+    width: 20rem;
     text-wrap: nowrap!important;
+    margin: 0 4px;
 }
 .input-editar, .input-editar:focus{
     background-color: var(--fundo-input);
     border: none;
     color: white!important;
 }
+.input-form__perfil{
+    text-align: start;
+    margin-top: 1rem;
+}
 .dados-amigo{
     text-align: start;
     padding-left: 4px;
 }
 .sobre-mim{
-    width: 50rem;
+    width: 44.5rem;
     resize:none;
     text-wrap:wrap!important;
+    margin-bottom: 1rem;
+}
+.editar-email{
+    width: 44.5rem;
 }
 .sobre-mim-amigo{
-
     width: 30rem;
 }
 
+
 @media screen and (max-width:480px){
+    a:hover{
+        text-decoration: none;
+    }
+    .container-perfil{
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .input-form__grupos{
         flex-direction: column;
+    }
+    .div-editar-meu-perfil{
+        width: 25rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left:-45px 
+    }
+    .editar-email,.sobre-mim{
+        width: 25rem;
+    }
+    .sobre-mim-amigo{
+        width: 23rem;
+        padding: 2px;
     }
     .input-form__perfil{
         width: 15rem!important;
@@ -51,19 +94,30 @@
     .editar-foto-perfil{
         margin-bottom: 1rem;
     }
-    .sobre-mim{
-        width: 15rem;
+    .sobre-mim,.editar-email{
+        width: 20rem!important;
     }
     .div-inputs{
         justify-content: center;
         align-items: center;
         margin: 4px auto;
     }
+    .btn-salvar-edicao{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-right: -76px 
+    }
+   
     
  }
- @media screen and (min-width:1025px){
-    .sobre-mim{
-        width: 40rem !important;
+ @media screen and (max-width:1025px){
+    .div-editar-meu-perfil{
+        flex-direction: column;
+       
+    }
+    .editar-email,.sobre-mim{
+        width: 20rem!important;
     }
     
  }
