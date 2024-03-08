@@ -22,7 +22,7 @@ if (!empty($usuarios_achados)) {
                         <img class='fotoUsuario-busca-amigo bg-white rounded-circle' src='../../{$usuario['foto']}' >
                     </div></a>
                     <div class='d-flex flex-column justify-content-start align-itens-center informacoes-amigo'>     
-                        <a href='../perfil.php?id='{$usuario['id']}' target='_blank'><p class='fs-3 card-nom'>{$usuario['usuario']}</p></a>
+                        <a href='../perfil.php?id='{$usuario['id']}' target='_blank'><p class='fs-3 card-nom'>{$usuario['nome']}</p></a>
                         <a href='../perfil.php?id='{$usuario['id']}' target='_blank'><p class='fs-6lead text-center card-email'>{$usuario['email']}</p></a>
                     </div>
                     <div>

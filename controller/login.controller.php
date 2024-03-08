@@ -29,7 +29,6 @@ if (isset($_POST['usuario']) || isset($_POST['senha'])){
             if (password_verify($senha, $row['senha'])){
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['user'] = $row['usuario'];
-                $_SESSION['fotoPerfil'] = $row['foto'];
                 $_SESSION['admin'] = false;
               
                 echo "<script>mostrarAlertaSucesso('Login efetuado com sucesso!','./public/home.php')</script>";
