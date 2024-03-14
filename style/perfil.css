@@ -17,6 +17,9 @@
     width: 10rem;
     height: 10rem;
 }
+.fotoUsuario-perfil:hover{
+    cursor: pointer;
+}
 .form-label{
     font-size: 1rem;
 }
