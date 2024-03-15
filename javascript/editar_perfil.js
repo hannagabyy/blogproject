@@ -7,7 +7,6 @@ fotoUsuario.addEventListener('click',function (e){
 });
 
 inputImage.addEventListener('change',function (e){
-    let image = document.createElement('img');
     let imageSrc = URL.createObjectURL(inputImage.files[0]);
     fotoUsuario.src = imageSrc;
 });
@@ -19,13 +18,11 @@ salvarPerfil.addEventListener('submit',function (e){
 
     xhttp.onload = function() {
         let resultado = this.responseText;
-        
+ 
         if(resultado == true){
-            toastMessagem('fa-square-check', 'Sua alterações foram salvas com sucesso!', '#63E6BE');
-            // setTimeout(function () {
-            //     location.reload();
-            // }, 2500);          
-        }else{
+            toastMessagem('fa-square-check', 'Sua alterações foram salvas com sucesso!', '#63E6BE');        
+        }
+        else{
             toastMessagem('fa-triangle-exclamation','Algo deu errado, tente novamente!','red');
         }
     }

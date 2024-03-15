@@ -59,45 +59,25 @@ class Usuarios {
         }
     }
 
-    public static function updateUsuarios($id, $email, $usuario, $senha, $foto){
+    public static function updateUsuarios($id, $alteracoes){
         global $mysqli;
 
-        $email = $mysqli->real_escape_string($email);
-        $usuario = $mysqli->real_escape_string($usuario);
-        $foto = $mysqli->real_escape_string($foto);
+        if(empty($alteracoes)){
+            return false;
+        }
 
         $atualizacao="";
         
-        if(!empty($email)){
-            $atualizacao .= " email='".$email."'";
-        }
-
-        if(!empty($usuario)){
+        foreach ($alteracoes as $campo => $valor){
             if(!empty($atualizacao)){
-                $atualizacao .= ",";
+                $atualizacao .= ", ";
             }
-
-            $atualizacao .= " usuario='".$usuario."'";    
-        }
-
-        if(!empty($senha)){
-            if(!empty($atualizacao)){
-                $atualizacao .= ",";
-            }
-
-            $atualizacao .= " senha='".$senha."'";
-        }
-
-        if(!empty($foto)){
-            if(!empty($atualizacao)){
-                $atualizacao .= ",";
-            }
-
-            $atualizacao .= " foto='".$foto."'";
+            $novoValor = $mysqli->real_escape_string($valor);
+            $atualizacao .= "$campo='".$novoValor."'";
         }
 
         $mysqli->begin_transaction();
-        
+
         try{  
             $sql_code = "UPDATE usuarios SET ".$atualizacao." where id=? ";
             $stmt = $mysqli->prepare($sql_code);

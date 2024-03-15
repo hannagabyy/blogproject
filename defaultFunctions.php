@@ -28,7 +28,7 @@ function atualiza_foto_perfil($fotoPerfil){
         $resultado['erro'] = "apenas as extensões: jpg e png são permitidas!";
         return $resultado;
     }
-    if(!move_uploaded_file($fotoPerfil['tmp_name'], '../'.$pasta.$novoNomeImg.".".$extensaoFoto)){
+    if(!move_uploaded_file($fotoPerfil['tmp_name'], '../../'.$pasta.$novoNomeImg.".".$extensaoFoto)){
         $resultado['erro'] = "erro ao atualizar foto!";
     }
 

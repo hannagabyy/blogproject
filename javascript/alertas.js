@@ -62,9 +62,15 @@ if(botoesApagar!== null){
 }
 
 function toastMessagem(icone,mensagem,cor){
+  //remove o alerta anterior
+  if(document.getElementById('toastMessagem')){
+    document.getElementById('toastMessagem').remove();
+  }
+
   let divMessage = document.createElement("div");
   divMessage.classList.add("position-fixed", "bottom-0", "end-0", "p-3");
   divMessage.style.zIndex = "11";
+  divMessage.id = "toastMessagem";
 
   // Define o HTML interno da div
   divMessage.innerHTML = `

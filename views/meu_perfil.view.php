@@ -39,7 +39,7 @@
 
             <div class="input-form__perfil">
                 <label for="sobre-mim" class="form-label text-light">Sobre Mim</label>
-                <textarea type="text" class="form-control input-editar sobre-mim" name="sobre-mim"></textarea>
+                <textarea type="text" class="form-control input-editar sobre-mim" name="sobreMim"><?=$usuario['sobreMim']?></textarea>
             </div>
             
             <div class="btn-salvar-edicao">
