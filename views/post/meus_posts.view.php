@@ -8,7 +8,7 @@
     <?php if (isset($posts) && !empty($posts)){
         
     foreach ($posts as $post): ?>
-        <div class="d-flex flex-column">
+    <div class="d-flex flex-column animate__animated animate__fadeInLeft">
         <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <img id="fotoUsuario" class="fotoUsuario" src="../../<?= $foto_perfil ?>">
@@ -31,19 +31,19 @@
                     <?= html_entity_decode($post['comentario']) ?>
                 </div> 
                 <div class="fab-container">
-                            <div class="button-reagir iconbutton">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <ul class="reacoes animate__animated">
-                                <?php foreach($reacoes as $reacao):?>
-                                    <li>
-                                        <div class="iconbutton">
-                                            <i class="fa-brands animate__animated animate__slideInRight " style="color:Red"><?=$reacao?></i>
-                                        </div>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>        
+                    <div class="button-reagir iconbutton">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <ul class="reacoes animate__animated">
+                        <?php foreach($reacoes as $reacao):?>
+                            <li>
+                                <div class="iconbutton">
+                                    <i class="fa-brands animate__animated animate__slideInRight " style="color:Red"><?=$reacao?></i>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>        
             </div>            
         </div>
 

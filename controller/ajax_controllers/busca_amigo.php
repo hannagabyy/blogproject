@@ -16,7 +16,7 @@ if (!empty($usuarios_achados)) {
         $usuario['foto'] = (!is_null($usuario['foto']))? $usuario['foto'] : 'imagens/default-user.jpg';
 
         echo "
-            <div class='card-amigo-resultado d-flex flex-column'>        
+            <div class='card-amigo-resultado d-flex flex-column animate__animated animate__fadeInDown'>        
                 <div class='m-2 d-flex justify-content-between align-items-center mx-auto p-2 rounded card-amigo'>
                     <a href='../perfil.php?id='{$usuario['id']}' target='_blank'><div class='fotoUsuario-busca-amigo bg-white rounded-circle'>
                         <img class='fotoUsuario-busca-amigo bg-white rounded-circle' src='../../{$usuario['foto']}' >

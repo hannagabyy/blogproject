@@ -53,9 +53,11 @@ function criarModal(editorId){
 
 			if (tamanhoPost >= limite){
 				contagem.style.color = "#ff2851";
+				contagem.style.borderColor = "#ff2851";
 		
 			}else{
 				contagem.style.color = 'green';
+				contagem.style.borderColor = 'green';
 			}
 		})
 		
@@ -135,8 +137,3 @@ function validarForm(formModal,limite,tamanhoPost){
 		formModal.submit();
 	}
 }
-
-function desabilitarBotao() {
-	document.getElementById("submitPost").disabled = true;
-}
-

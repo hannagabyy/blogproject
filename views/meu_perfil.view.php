@@ -3,15 +3,15 @@
 <h1 class="titulo-principal text-center display-2 mt-5 text-light">Edite seu perfil</h1>
 <main class="col-md-10 mx-auto">
     <form id="salvarPerfil" method="post" enctype="multipart/form-data" class="d-flex flex-column justify-content-center align-items-center my-4 w-100 container-perfil">
-        <img id="fotoUsuario" class="fotoUsuario-perfil bg-white rounded-circle" src="../<?= $usuario['foto'] ?>">
+        <img id="fotoUsuario" class="fotoUsuario-perfil bg-white rounded-circle animate__animated animate__rubberBand" src="../<?= $usuario['foto'] ?>">
         <label class="editar-foto-perfil m-2" for="fotoPerfil">
             Escolha sua foto de perfil
         </label>
 
-        <input id="inputImage" type="file" name="fotoPerfil" class="editar-foto-perfil" accept="image/*" hidden />
+        <input id="inputImage" type="file" name="fotoPerfil" class="editar-foto-perfil"  accept="image/*" hidden />
 
         <div class="div-editar-meu-perfil">
-            <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
+            <input  type="hidden" name="id" value="<?= $usuario['id'] ?>">
             
             <div class="input-form__perfil">
                 <label for="nome" class="form-label text-light">Nome</label>
