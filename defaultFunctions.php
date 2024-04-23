@@ -17,19 +17,19 @@ function atualiza_foto_perfil($fotoPerfil){
     ];
 
     if($fotoPerfil['error'] != 0 ){
-        $resultado['erro'] = "erro ao atualizar foto, tente novamente!";
+        $resultado['erro'] = "Erro ao atualizar foto, tente novamente!";
         return $resultado;
     }
     if($fotoPerfil['size'] > $tamanhoPermitido ){
-        $resultado['erro'] = "tamanho máximo é de 2mb";
+        $resultado['erro'] = "Tamanho máximo é de 2mb";
         return $resultado;
     }
     if(!in_array($extensaoFoto, ['jpg', 'png'])){
-        $resultado['erro'] = "apenas as extensões: jpg e png são permitidas!";
+        $resultado['erro'] = "Apenas as extensões: jpg e png são permitidas!";
         return $resultado;
     }
     if(!move_uploaded_file($fotoPerfil['tmp_name'], '../../'.$pasta.$novoNomeImg.".".$extensaoFoto)){
-        $resultado['erro'] = "erro ao atualizar foto!";
+        $resultado['erro'] = "Erro ao atualizar foto!";
     }
 
     $resultado['nomeImg'] = $pasta.$novoNomeImg.".".$extensaoFoto;

@@ -17,13 +17,13 @@ salvarPerfil.addEventListener('submit',function (e){
     let formData = new FormData(salvarPerfil);
 
     xhttp.onload = function() {
-        let resultado = this.responseText;
+        let resultado = JSON.parse(this.responseText);
  
-        if(resultado == true){
+        if(resultado['sucesso'] == true){
             toastMessagem('fa-square-check', 'Sua alterações foram salvas com sucesso!', '#63E6BE');        
         }
         else{
-            toastMessagem('fa-triangle-exclamation','Algo deu errado, tente novamente!','red');
+            toastMessagem('fa-triangle-exclamation',resultado['msg'],'red');
         }
     }
 

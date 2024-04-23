@@ -9,7 +9,10 @@ $fotoPerfil = (isset($_FILES['fotoPerfil']))? $_FILES['fotoPerfil'] : null;
 
 
 /* atualização */ 
-$resultado = false;
+$resultado = [
+    'sucesso'=> false,
+    'msg' => 'Algo deu errado, tente novamente!'
+];
 
 if($_POST){
     $camposEditaveis = [
@@ -49,16 +52,17 @@ if($_POST){
         $resultadoImg = atualiza_foto_perfil($fotoPerfil);
         
         if(!is_null($resultadoImg['erro'])){
-           //echo $resultadoImg['erro'];
+            $resultado['msg'] = $resultadoImg['erro'];
         }
         else{
-            // unlink('../../'.$usuario['foto']);
+            unlink('../../'.$usuario['foto']);
             $alteracoes['foto'] = $resultadoImg['nomeImg'];
         }
     }
         
 
     //salvando os dados editados
-    $resultado = Usuarios::updateUsuarios($id, $alteracoes);
+    $resultado['sucesso'] = Usuarios::updateUsuarios($id, $alteracoes);
 }
-echo $resultado;
+
+print(json_encode($resultado));
