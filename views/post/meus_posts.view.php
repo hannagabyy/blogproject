@@ -36,9 +36,9 @@
                     </div>
                     <ul class="reacoes animate__animated">
                         <?php foreach($reacoes as $reacao):?>
-                            <li>
+                            <li class="animate-slide-in-right">
                                 <div class="iconbutton">
-                                    <i class="fa-brands animate__animated animate__slideInRight " style="color:Red"><?=$reacao?></i>
+                                    <i class="fa-brands" style="color:Red"><?=$reacao?></i>
                                 </div>
                             </li>
                         <?php endforeach; ?>

@@ -57,3 +57,10 @@ main i{
 .nav-menu-item .nav-link:hover::after{
     width: 100%;
 }
+
+
+@media screen and (max-width:480px){
+    .nav-menu-item .nav-link::after {
+        display: none; /* Desativa completamente o estilo */
+    }
+}

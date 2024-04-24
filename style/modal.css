@@ -21,7 +21,12 @@
     width: 10rem;
     padding: 4px;
     border-radius: 4px;
+    
 }
+select{
+    -webkit-appearance: none;
+}
+
 .editor[type="text"]{
     width: 10ch;
 }

@@ -58,7 +58,7 @@ body{
     display: flex;
     right: 50px;
     top: 0;
-    animation-duration: 3s;
+    /* animation-duration: 3s; */
     display: none;
     
 }
@@ -66,8 +66,23 @@ body{
     display:flex;
     justify-content:flex-end;
     padding:5px;
+    animation: slideInRight 0.5s ease forwards;
     
 }
+.reacoes li.animate-slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 @media screen and (min-width: 1025px){ 
    

@@ -47,9 +47,11 @@
             </div>
 
         <?php endif; ?>
-
+    
     </section>
-
+    
+    <img class="foto-flutuante" src="../../imagens/image-amigos.svg" alt="Imagem de dois amigos conversando">
+    
 
 </main>
 

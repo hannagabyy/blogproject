@@ -43,6 +43,18 @@
     color: white;
     text-decoration: none;
 }
+
+.foto-flutuante {
+        position: fixed; 
+        bottom: 0px; 
+        right: 0px; 
+        width: 200px;
+        height: 200px; 
+        z-index: -99; 
+        opacity: 0.6;
+}
+    
+
 @media screen and (max-width:480px){ 
     .card-amigo{
         justify-content: space-between!important;
