@@ -46,7 +46,7 @@
         </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a679630483.js" crossorigin="anonymous"></script>
-    <script src="\Blog_project\javascript\cadastrar_usuario.js"></script>
+    <script src="\Blog_project\javascript\ajax.js"></script>
     <script src="\Blog_project\javascript\alertas.js"></script>
     </body>
 </html>

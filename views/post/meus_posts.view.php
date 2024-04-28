@@ -35,10 +35,13 @@
                         <i class="fa-regular fa-heart"></i>
                     </div>
                     <ul class="reacoes animate__animated">
-                        <?php foreach($reacoes as $reacao):?>
-                            <li class="animate-slide-in-right">
+                        <?php foreach($emojis as $emoji_id => $emoji):
+                            $quantidade_reacao = (array_key_exists($emoji_id, $reacoes[$post['id']]))? $reacoes[$post['id']][$emoji_id] : '0'?>
+                            
+                            <li class="animate-slide-in-right" data-num_icone="<?=$emoji_id?>" data-num_post="<?=$post['id']?>" data-num_user="<?=$userId?>" onclick="atualizaReacao(this)">
                                 <div class="iconbutton">
-                                    <i class="fa-brands" style="color:Red"><?=$reacao?></i>
+                                    <span style="position: absolute; right: 5px; top: 5px; color: black;"><?= $quantidade_reacao ?></span>
+                                    <i class="fa-brands" style="color:Red"><?=$emoji?></i>
                                 </div>
                             </li>
                         <?php endforeach; ?>
