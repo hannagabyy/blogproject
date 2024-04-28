@@ -48,16 +48,35 @@ function atualizaReacao(element){
     let num_icone = element.getAttribute('data-num_icone');
     let num_post = element.getAttribute('data-num_post');
     let num_user = element.getAttribute('data-num_user');
-
+   
+    // console.log(botaoReagir.childNodes)
+    // <i class="fa-brands" style="color:Red"><?=$emoji?></i>
+    // botaoregair, pega o filho e bota o innerhtml para o emoji retornado do resultado
     const xhttp = new XMLHttpRequest();
     
     xhttp.onload = function() {
-        let resultado = this.responseText;
+        let botaoReagir =  element.parentNode.parentNode.querySelector('.button-reagir');
+        let icone_atual = botaoReagir.querySelector('i')
+        let resultado = JSON.parse(this.responseText);
 
-        toastMessagem('fa-square-check', resultado, '#63E6BE');
-        setTimeout(function () {
-            location.reload();
-        }, 1500);
+        let novo_icone = document.createElement("i");
+        novo_icone.className = "fa-brands";
+        novo_icone.style.color = "red";
+        novo_icone.innerHTML = resultado['emoji'];        
+
+        if(resultado['sucesso'] === true){
+            setTimeout(function () {
+                icone_atual.remove();
+                botaoReagir.appendChild(novo_icone)
+                // debug
+                console.log('Ainda precisa atualizar a página para ver a quantidade mudar');
+                toastMessagem('fa-square-check', 'Ainda precisa atualizar a página para ver a quantidade mudar', '#63E6BE');
+                // debug
+            }, 1500);
+        }
+        else{
+            toastMessagem('fa-square-check', resultado['msg'], '#63E6BE');
+        }  
         
     }
 
