@@ -7,7 +7,7 @@ require_once(__DIR__."/../../Daofactory/reacao.php");
 
 //Carrega os posts do usuário logado
 $id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
-$userId = $id;
+$usuario_id = $id;
 
 $posts = Post::getPostByUsuarioId($id);
 $usuario = Usuarios::getUsuariosById($id);

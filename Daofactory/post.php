@@ -31,7 +31,7 @@ class Post {
         global $mysqli;
 
         $sql_code = 
-            "SELECT post.comentario, post.data_criacao, usuarios.usuario, usuarios.foto
+            "SELECT post.comentario, post.data_criacao, post.id, usuarios.usuario, usuarios.foto
              FROM post 
              INNER JOIN usuarios ON post.usuarioId = usuarios.id
              WHERE post.privacidade='publico'

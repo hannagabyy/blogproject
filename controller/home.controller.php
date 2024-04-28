@@ -22,6 +22,14 @@ if(!empty($amigos)){
         $post_do_amigo['foto'] = (!is_null($post_do_amigo['foto']))? $post_do_amigo['foto'] : 'imagens/default-user.jpg';
 
     }
-    $reacoes = Reacao::getAllReacoes();
-    $reacoes = array_column($reacoes, 'codigo');
+    
+    #pegando emojis
+    $emojis = Reacao::getAllReacoes();
+    $emojis = array_column($emojis, 'codigo', 'id');
+
+    #pegando reacoes
+    foreach ($posts_dos_amigos as $post){
+        $reacoes[$post['id']] = Reacao::getQuantidadePostReacoesByPostId($post['id']);
+        $reacoes[$post['id']] = array_column($reacoes[$post['id']], 'quantidade', 'id');
+    }
 }

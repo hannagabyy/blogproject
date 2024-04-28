@@ -55,10 +55,13 @@ function atualizaReacao(element){
         let resultado = this.responseText;
 
         toastMessagem('fa-square-check', resultado, '#63E6BE');
+        setTimeout(function () {
+            location.reload();
+        }, 1500);
         
     }
 
-    xhttp.open("POST", "../../controller/ajax_controllers/atualiza_reacao.php");
+    xhttp.open("POST", "/Blog_project/controller/ajax_controllers/atualiza_reacao.php");
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("num_icone="+num_icone+"&num_post="+num_post+"&num_user="+num_user);
 

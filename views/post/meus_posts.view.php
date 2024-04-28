@@ -38,7 +38,7 @@
                         <?php foreach($emojis as $emoji_id => $emoji):
                             $quantidade_reacao = (array_key_exists($emoji_id, $reacoes[$post['id']]))? $reacoes[$post['id']][$emoji_id] : '0'?>
                             
-                            <li class="animate-slide-in-right" data-num_icone="<?=$emoji_id?>" data-num_post="<?=$post['id']?>" data-num_user="<?=$userId?>" onclick="atualizaReacao(this)">
+                            <li class="animate-slide-in-right" data-num_icone="<?=$emoji_id?>" data-num_post="<?=$post['id']?>" data-num_user="<?=$usuario_id?>" onclick="atualizaReacao(this)">
                                 <div class="iconbutton">
                                     <span style="position: absolute; right: 5px; top: 5px; color: black;"><?= $quantidade_reacao ?></span>
                                     <i class="fa-brands" style="color:Red"><?=$emoji?></i>
