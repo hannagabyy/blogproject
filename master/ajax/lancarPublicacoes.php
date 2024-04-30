@@ -72,7 +72,7 @@ for($i=1; $i <= $quantidade_desejada; $i++){
     $resultado = Post::insertPost($comentarios_predefinidos[$comentario_sorteado], $usuario_id, $privacidade);
 
     if($resultado){
-        echo "<div>um post inserido para o usuario: ".$usuarios[$usuario_sorteado]['usuario']." !</div>";
+        echo "<div class='card-master'>um post inserido para o usuario: ".$usuarios[$usuario_sorteado]['usuario']." !</div>";
     }else{
         echo "<div>Erro ao inserir post para o usuario: ".$usuarios[$usuario_sorteado]['usuario']." !</div>";
     }
