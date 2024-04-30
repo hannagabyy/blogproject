@@ -26,6 +26,25 @@
     width: 20px;
     height: 20px;
 }
+
+.fadeInLeft {
+    animation-name: myFadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes myFadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
 @media screen and (min-width: 1025px){ 
    
     .post-texto{

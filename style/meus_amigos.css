@@ -37,7 +37,7 @@
     stroke-width: 1px;
     stroke: #403E3D;
     background-blend-mode: darken, normal;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.60));
 }
 .card-amigo a{
     color: white;
@@ -53,7 +53,20 @@
         z-index: -99; 
         opacity: 0.6;
 }
-    
+.fade-in-down {
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 @media screen and (max-width:480px){ 
     .card-amigo{

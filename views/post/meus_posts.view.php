@@ -8,7 +8,7 @@
     <?php if (isset($posts) && !empty($posts)){
         
     foreach ($posts as $post): ?>
-    <div class="d-flex flex-column animate__animated animate__fadeInLeft">
+    <div class="d-flex flex-column fadeInLeft">
         <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <img id="fotoUsuario" class="fotoUsuario" src="../../<?= $foto_perfil ?>">
@@ -34,13 +34,13 @@
                     <div class="button-reagir iconbutton">
                         <i class="fa-regular fa-heart"></i>
                     </div>
-                    <ul class="reacoes animate__animated">
+                    <ul class="reacoes">
                         <?php foreach($emojis as $emoji_id => $emoji):
                             $quantidade_reacao = (array_key_exists($emoji_id, $reacoes[$post['id']]))? $reacoes[$post['id']][$emoji_id] : '0'?>
                             
                             <li class="animate-slide-in-right" data-num_icone="<?=$emoji_id?>" data-num_post="<?=$post['id']?>" data-num_user="<?=$usuario_id?>" onclick="atualizaReacao(this)">
-                                <div class="iconbutton">
-                                    <span id="contador-reacao" style="position: absolute; right: 5px; top: 5px; color: black;"><?= $quantidade_reacao ?></span>
+                                <div class="iconbutton position-relative">
+                                    <span id="contador-reacao" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><?= $quantidade_reacao ?></span>
                                     <i class="fa-brands" style="color:Red"><?=$emoji?></i>
                                 </div>
                             </li>
