@@ -13,7 +13,7 @@ $resultado = [
     'emoji' => ''
 ];
 
-$existeReacao = Reacao::getPostReacaoByUsuarioIdAndPostId($num_user, $num_post);
+$existeReacao = Reacao::getPostReacaoCodigoByUsuarioIdAndPostId($num_user, $num_post);
 
 if(isset($existeReacao) && !empty($existeReacao)){
     $resultado['sucesso'] = Reacao::updatePostReacao($num_icone, $num_post, $num_user);

@@ -31,5 +31,7 @@ if(!empty($amigos)){
     foreach ($posts_dos_amigos as $post){
         $reacoes[$post['id']] = Reacao::getQuantidadePostReacoesByPostId($post['id']);
         $reacoes[$post['id']] = array_column($reacoes[$post['id']], 'quantidade', 'id');
+        $reacoes_aos_posts[$post['id']] = Reacao::getPostReacaoCodigoByUsuarioIdAndPostId($usuario_id, $post['id']);
+        $reacoes_aos_posts[$post['id']] = ($reacoes_aos_posts[$post['id']])? $reacoes_aos_posts[$post['id']]['codigo'] : '&#x2661;';
     }
 }

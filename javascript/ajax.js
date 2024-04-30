@@ -65,14 +65,10 @@ function atualizaReacao(element){
         novo_icone.innerHTML = resultado['emoji'];        
 
         if(resultado['sucesso'] === true){
-            setTimeout(function () {
-                icone_atual.remove();
-                botaoReagir.appendChild(novo_icone)
-                // debug
-                console.log('Ainda precisa atualizar a página para ver a quantidade mudar');
-                toastMessagem('fa-square-check', 'Ainda precisa atualizar a página para ver a quantidade mudar', '#63E6BE');
-                // debug
-            }, 1500);
+            icone_atual.remove();
+            botaoReagir.appendChild(novo_icone)
+            console.log('Ainda precisa atualizar a página para ver a quantidade mudar');
+            toastMessagem('fa-square-check', 'Ainda precisa atualizar a página para ver a quantidade mudar', '#63E6BE');
         }
         else{
             toastMessagem('fa-square-check', resultado['msg'], '#63E6BE');

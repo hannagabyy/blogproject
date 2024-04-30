@@ -34,10 +34,13 @@ class Reacao {
         return $row; 
     }
 
-    public static function getPostReacaoByUsuarioIdAndPostId($usuarioId, $postId){
+    public static function getPostReacaoCodigoByUsuarioIdAndPostId($usuarioId, $postId){
         global $mysqli;
 
-        $sql_code = "SELECT * FROM post_reacao where usuario_id='$usuarioId' and post_id='$postId' ";
+        $sql_code = "SELECT reacao.codigo 
+                    FROM post_reacao 
+                    INNER JOIN reacao on reacao.id = post_reacao.reacao_id 
+                    where usuario_id='$usuarioId' and post_id='$postId' ";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $row = $sql_query->fetch_assoc();
 

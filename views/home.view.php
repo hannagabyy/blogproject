@@ -22,7 +22,7 @@
                         </div>
                         <div class="fab-container">
                             <div class="button-reagir iconbutton">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-brands"><?=$reacoes_aos_posts[$post['id']]?></i>
                             </div>
                             <ul class="reacoes">
                                 <?php foreach($emojis as $emoji_id => $emoji):
