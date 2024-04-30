@@ -6,6 +6,7 @@ abrirModal.addEventListener('click', function() {
 function fechaModalAberto(){
 	const botaoSalvarEdicao = document.querySelector('#botao_salvar_edicao-post');
 	const editor = document.querySelector('.ck-editor');
+	let botaoReagirEscondido = document.querySelectorAll(".fab-container[style*='display: none']");
 
 	if (editor){//apaga o que já estiver aberto
 		editor.remove();
@@ -17,6 +18,13 @@ function fechaModalAberto(){
 			comentarioEscondido.removeAttribute('style');
 			comentarioEscondido.classList.remove('comentario_escondido');
 		}				
+	}
+
+	if(botaoReagirEscondido.length > 0){
+		console.log(botaoReagirEscondido)
+		botaoReagirEscondido.forEach(function(elemento){
+			elemento.style.display='block';
+		})		
 	}
 }
 
@@ -73,13 +81,15 @@ function criarModal(editorId){
 	} );
 };
 
-function editarPost(postId, event){
+function editarPost(elemento, postId, event){
 	event.preventDefault();
 
+	let botaoReagir = elemento.parentNode.parentNode.parentNode.querySelector('.fab-container');
 	let comentarioId = 'comentarioId'+postId;
 	let comentario = document.getElementById(comentarioId);
 
 	criarModal(comentarioId);		
+	botaoReagir.style.display='none';
 
 	const div = document.createElement('div');
 	div.setAttribute('class', "d-flex justify-content-end");
