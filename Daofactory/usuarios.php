@@ -126,7 +126,7 @@ class Usuarios {
 
         $nome_amigo = $mysqli->real_escape_string($nome_amigo);
         
-        $sql_code = "SELECT * FROM usuarios where id != '$usuario_id' and usuario like '$nome_amigo%' LIMIT 10";
+        $sql_code = "SELECT * FROM usuarios where id != '$usuario_id' and `admin`= 0 and usuario like '$nome_amigo%' LIMIT 10";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $row = $sql_query->fetch_all(MYSQLI_ASSOC);
 
