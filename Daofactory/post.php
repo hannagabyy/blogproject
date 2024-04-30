@@ -43,6 +43,16 @@ class Post {
         return $result;
     }
 
+    public static function getAllPosts(){
+        global $mysqli;
+        
+        $sql_code = "SELECT * FROM post ";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $row = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $row; 
+    }
+
     public static function deletePostById($id) {
         global $mysqli;
 
