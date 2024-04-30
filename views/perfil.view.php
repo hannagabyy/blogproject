@@ -5,7 +5,7 @@
 <main class="col-md-10 mx-auto">
     <div class="d-flex flex-column justify-content-center align-items-center my-4 w-100 container-perfil">
         <img id="fotoUsuario" class="fotoUsuario-perfil bg-white rounded-circle" src="../<?= $usuario['foto'] ?>">
-        <p class="titulo-principal text-center display-6 mt-5 text-light"><span><?= $usuario['usuario'] ?></span></p>
+        <p class="titulo-principal-perfil text-center display-6 mt-5 text-light"><span><?= $usuario['usuario'] ?></span></p>
         <p class="sobre-mim-amigo text-center fw-light"><?=$usuario['sobreMim']?></p>
         <div class="div-inputs">
             <form action="" class="">
