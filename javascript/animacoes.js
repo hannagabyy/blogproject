@@ -9,5 +9,15 @@ botoesReagir.forEach((botao) => {
         } else {
             opcoesReagirAtual.style.display = "flex"; // Exibe as reações se estiverem ocultas
         }
+        event.stopPropagation();
     });
+});
+
+document.addEventListener('click', function(event) {
+    if (!event.target.classList.contains('button-reagir')) {
+        let opcoesReagir = document.querySelectorAll('.reacoes');
+        opcoesReagir.forEach((opcao) => {
+            opcao.style.display = "none";
+        });
+    }
 });
