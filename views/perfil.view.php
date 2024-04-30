@@ -5,14 +5,14 @@
 <main class="col-md-10 mx-auto">
     <div class="d-flex flex-column justify-content-center align-items-center my-4 w-100 container-perfil">
         <img id="fotoUsuario" class="fotoUsuario-perfil bg-white rounded-circle" src="../<?= $usuario['foto'] ?>">
-        <p class="titulo-principal text-center display-6 mt-5 text-light"><?= $usuario['usuario'] ?></p>
-        <p class="sobre-mim-amigo text-center fw-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the nged. It release of Letraset sheets containing Lorem Ipsum passages, .</p>
+        <p class="titulo-principal text-center display-6 mt-5 text-light"><span><?= $usuario['usuario'] ?></span></p>
+        <p class="sobre-mim-amigo text-center fw-light"><?=$usuario['sobreMim']?></p>
         <div class="div-inputs">
             <form action="" class="">
                     <div class="">
                         <div class="">
                             <label for="usuario" class="form-label label-amigos text-start text-light fw-bold" style="color:orange;">Nome:</label>
-                            <span class="dados-amigo">Maria de Paula</span>
+                            <span class="dados-amigo"><?=$usuario['nome']?></span>
                         </div>
                         <div class="">
                             <label for="email" class="form-label label-amigos text-start text-light fw-bold" style="color:orange">Email:</label>
