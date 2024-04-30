@@ -49,7 +49,6 @@ body{
     justify-content:center;  
     height: 100%;
     color:#e0a031;
-    font-size: 20px;
   
                                                                                                                 
 }
@@ -76,6 +75,10 @@ body{
 }
 .reacoes li.animate-slide-in-right {
     animation: deslizarParaDireira  0.5s ease forwards;
+}
+.button-reagir .fa-brands{
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'EmojiSymbols', 'Apple Color Emoji', 'Segoe UI', sans-serif;
+    font-size: 28px;
 }
 @keyframes deslizarParaDireira {
     from {
