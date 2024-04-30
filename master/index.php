@@ -59,7 +59,7 @@ if(isset($_POST['usuario']) && isset($_POST['senha'])){
     
     <body>    
         <main class="w-100 h-100 d-flex align-items-center justify-content-center">                     
-            <form class="bg-white p-4 rounded shadow-lg " method="POST">
+            <form class="bg-white p-4 rounded shadow-lg" style="min-width: 400px!important;" method="POST">
                 <h1 class="text-center mb-3 text-primary">LOGIN</h1>
 
                 <div class="mb-3 w-50 mx-auto">
