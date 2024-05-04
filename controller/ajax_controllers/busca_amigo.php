@@ -32,5 +32,5 @@ if (!empty($usuarios_achados)) {
             </div>";
     }
 } else {
-    echo "sem resultado!";
+    echo "Não encontramos nenhum usuário com esse nome!";
 }
