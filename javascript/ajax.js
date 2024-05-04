@@ -1,5 +1,4 @@
 function buscarAmigo(nomePesquisa){
-    console.log('teclou');
     let caixaDeResultado = document.querySelector('#caixaDeResultados');
 
     if (nomePesquisa.length == 0) { 
@@ -23,11 +22,23 @@ function buscarAmigo(nomePesquisa){
 function atualizaAmizade(icone){
     let usuarioId = icone.getAttribute('data-usuarioid');
 
-    const xhttp2 = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
 
-    xhttp2.open("POST", "../../controller/ajax_controllers/atualiza_amizade.php");
-    xhttp2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp2.send("amigoId="+usuarioId); 
+    xhttp.onload = function (){
+        resultado = JSON.parse(this.responseText)
+
+        if(resultado['sucesso'] === true){
+           toastMessagem('fa-square-check', resultado['msg'], '#63E6BE');
+        }
+        else{
+            toastMessagem('fa-triangle-exclamation',resultado['msg'],'red');
+        }  
+        
+    } 
+
+    xhttp.open("POST", "../../controller/ajax_controllers/atualiza_amizade.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("amigoId="+usuarioId); 
 
     atualizaIcone(icone);
 }
@@ -49,29 +60,25 @@ function atualizaReacao(element){
     let num_post = element.getAttribute('data-num_post');
     let num_user = element.getAttribute('data-num_user');
    
-    // console.log(botaoReagir.childNodes)
-    // <i class="fa-brands" style="color:Red"><?=$emoji?></i>
-    // botaoregair, pega o filho e bota o innerhtml para o emoji retornado do resultado
     const xhttp = new XMLHttpRequest();
     
     xhttp.onload = function() {
         let botaoReagir =  element.parentNode.parentNode.querySelector('.button-reagir');
-        let icone_atual = botaoReagir.querySelector('i')
-        let resultado = JSON.parse(this.responseText);
-
-        let novo_icone = document.createElement("i");
-        novo_icone.className = "fa-brands";
-        novo_icone.style.color = "red";
-        novo_icone.innerHTML = resultado['emoji'];        
-
+        let icone_atual = botaoReagir.querySelector('i');
+        let lista_reacoes = botaoReagir.parentNode.querySelectorAll('li');
+        let resultado = JSON.parse(this.responseText);     
+    
         if(resultado['sucesso'] === true){
-            icone_atual.remove();
-            botaoReagir.appendChild(novo_icone)
-            console.log('Ainda precisa atualizar a página para ver a quantidade mudar');
-            toastMessagem('fa-square-check', 'Ainda precisa atualizar a página para ver a quantidade mudar', '#63E6BE');
+            icone_atual.style.color = 'red';
+            icone_atual.innerHTML = resultado['codEmoji'];        
+
+            lista_reacoes.forEach(function(li){
+                let key = li.getAttribute('data-num_icone')
+                li.querySelector('#contador-reacao').textContent = (resultado['contagem'][key])? resultado['contagem'][key] : 0;
+            }) 
         }
         else{
-            toastMessagem('fa-square-check', resultado['msg'], '#63E6BE');
+            toastMessagem('fa-triangle-exclamation',resultado['msg'],'red');
         }  
         
     }

@@ -10,7 +10,9 @@ $num_user =  filter_input(INPUT_POST, 'num_user', FILTER_SANITIZE_NUMBER_INT);
 $resultado = [
     'sucesso'=> false,
     'msg' => 'Algo deu errado, tente novamente!',
-    'emoji' => ''
+    'reacao' => '',
+    'codEmoji' => '',
+    'contagem' => ''
 ];
 
 $existeReacao = Reacao::getPostReacaoCodigoByUsuarioIdAndPostId($num_user, $num_post);
@@ -22,8 +24,14 @@ if(isset($existeReacao) && !empty($existeReacao)){
     $resultado['sucesso'] = Reacao::insertPostReacao($num_icone, $num_post, $num_user);
 }
 
-if ($resultado['sucesso'] == true){
-    $resultado['emoji'] = Reacao::getReacaoById($num_icone)['codigo'];
+if ($resultado['sucesso'] == true){    
+    $retorno = Reacao::getReacaoById($num_icone);
+
+    $resultado['codEmoji'] = $retorno['codigo'];
+    $resultado['reacao'] = $retorno['emoji'];
+
+    $retorno = Reacao::getQuantidadePostReacoesByPostId($num_post);
+    $resultado['contagem'] = array_column($retorno, 'quantidade', 'id');
 }
 
 print(json_encode($resultado));

@@ -30,7 +30,7 @@
                                     
                                     <li class="animate-slide-in-right" data-num_icone="<?=$emoji_id?>" data-num_post="<?=$post['id']?>" data-num_user="<?=$usuario_id?>" onclick="atualizaReacao(this)">
                                         <div class="iconbutton position-relative">
-                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><?= $quantidade_reacao ?></span>
+                                            <span id="contador-reacao" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><?= $quantidade_reacao ?></span>
                                             <i class="fa-brands" style="color:Red"><?=$emoji?></i>
                                         </div>
                                     </li>
