@@ -6,13 +6,25 @@ abrirModal.addEventListener('click', function() {
 function fechaModalAberto(){
 	const botaoSalvarEdicao = document.querySelector('#botao_salvar_edicao-post');
 	const editor = document.querySelector('.ck-editor');
+	let botaoReagirEscondido = document.querySelectorAll(".fab-container[style*='display: none']");
 
 	if (editor){//apaga o que já estiver aberto
-		let comentarioEscondido = document.querySelector('.comentario_escondido');
 		editor.remove();
-		botaoSalvarEdicao.remove();
-		comentarioEscondido.removeAttribute('style');
-		comentarioEscondido.classList.remove('comentario_escondido');		
+		
+		//fecha modal de edição se já estiver aberto
+		let comentarioEscondido = document.querySelector('.comentario_escondido');
+		if(comentarioEscondido){
+			botaoSalvarEdicao.remove();
+			comentarioEscondido.removeAttribute('style');
+			comentarioEscondido.classList.remove('comentario_escondido');
+		}				
+	}
+
+	if(botaoReagirEscondido.length > 0){
+		console.log(botaoReagirEscondido)
+		botaoReagirEscondido.forEach(function(elemento){
+			elemento.style.display='block';
+		})		
 	}
 }
 
@@ -32,31 +44,65 @@ function criarModal(editorId){
 			],
 			shouldNotGroupWhenFull: false
 		}
-	})
+	}) 
 	.then( editor => {
-			console.log( editor );
+		let contagem = document.getElementById('count-caracter');
+		let tamanhoPost = '';
+		let formModal = document.getElementById('form-modal');
+		const limite = 300;
+
+		contagem.textContent = 0 + "/" + limite;
+		
+		editor.model.document.on('change:data', () => {
+			let texto =  editor.getData().replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ') ;
+			tamanhoPost = texto.length;
+			
+			contagem.textContent = tamanhoPost + "/" + limite;
+
+			if (tamanhoPost >= limite){
+				contagem.style.color = "#ff2851";
+				contagem.style.borderColor = "#ff2851";
+		
+			}else{
+				contagem.style.color = 'green';
+				contagem.style.borderColor = 'green';
+			}
+		})
+		
+		formModal.addEventListener('submit',(e)=>{
+			e.preventDefault();
+			validarForm(formModal,limite,tamanhoPost);
+		})
+
+		
 	} )
 	.catch( error => {
 			console.log( error );
 	} );
 };
 
-function editarPost(postId, event){
+function editarPost(elemento, postId, event){
 	event.preventDefault();
 
+	let botaoReagir = elemento.parentNode.parentNode.parentNode.querySelector('.fab-container');
 	let comentarioId = 'comentarioId'+postId;
 	let comentario = document.getElementById(comentarioId);
 
 	criarModal(comentarioId);		
+	botaoReagir.style.display='none';
+
+	const div = document.createElement('div');
+	div.setAttribute('class', "d-flex justify-content-end");
+	comentario.parentElement.appendChild(div);
 
 	const button = document.createElement('button');
-	button.setAttribute('class', "btn btn-primary col-2 text-white d-flex justify-content-center align-items-center");
+	button.setAttribute('class', "d-flex align-items-center col-3 justify-content-center my-3 btn bg-success text-light");
 	button.setAttribute('id', "botao_salvar_edicao-post");
 	button.innerText="Salvar";
-	comentario.parentElement.appendChild(button);
+	div.appendChild(button);
 
 	const img =  document.createElement('img');
-	img.setAttribute('class', "ms-2");
+	img.setAttribute('class', "icones-botoes ms-2");
 	img.setAttribute('src', "../../imagens/correct-icon.svg");
 	img.setAttribute('alt', "Ícone de correto no botão de postar");
 	button.appendChild(img);
@@ -72,11 +118,12 @@ function salvarEdicao(postId, event){
 	event.preventDefault();	
 
 	let novoComentario = document.querySelector('.ck-content');
+	novoComentario.setAttribute('class', "modal-editar");
 	let comentarioConcatenado = "";
 
 	const xhttp = new XMLHttpRequest();
 	xhttp.onload = function() {
-		window.alert('salvo com sucesso');	
+		// window.alert('salvo com sucesso');	
 		location.reload();	
 	}
 
@@ -87,4 +134,16 @@ function salvarEdicao(postId, event){
 	xhttp.open("POST", "./../../controller/ajax_controllers/editar_post.php");
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("postId="+postId+"&comentario="+comentarioConcatenado);
+}
+
+function validarForm(formModal,limite,tamanhoPost){
+
+	if (tamanhoPost == 0){
+		mostrarAlertaErro(`Não foi possível salvar seu post ele esta vazio!`);
+	}
+	else if (tamanhoPost > limite){	
+		mostrarAlertaErro(`Não foi possível salvar seu post pois ele excede o limite de ${limite} caracteres!`);
+	}else{
+		formModal.submit();
+	}
 }

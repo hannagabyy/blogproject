@@ -1,11 +1,12 @@
 
 .fotoUsuario{
-    width: 50em;
-    height: 50em;
+    width: 8rem;
+    height: 8rem;
     max-width: 150px;
     max-height: 150px;
     border-radius: 50%;
     background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .publicacaoUsuario{
@@ -17,16 +18,106 @@
 .post-texto{
     word-wrap: break-word;
 }
-
-@media (max-width: 780px) {
-    .fotoUsuario{
-        max-width: 80px;
-        max-height: 80px;
+.div-post{
+    position: relative;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background: #f1f1f1;
+}
+.fab-container{
+    position:absolute; 
+   bottom: -5px;
+    right:10px;
+    cursor:pointer;
+    
+}
+.iconbutton{
+    width:40px;
+    height:40px;  
+    border-radius: 100%; 
+    background: #D9D9D9;
+    
+}
+.button-reagir{
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+.iconbutton i{
+    display:flex; 
+    align-items:center;
+    justify-content:center;  
+    height: 100%;
+    color:#e0a031;
+  
+                                                                                                                
+}
+.reacoes{
+    list-style-type: none;
+    position:absolute;
+    display: flex;
+    right: 50px;
+    top: 0;
+    display: none;
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'EmojiSymbols', 'Apple Color Emoji', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+         
+}
+.reacoes li{
+    display:flex;
+    justify-content:flex-end;
+    padding:5px;
+    animation: deslizarParaDireira  0.5s ease forwards;
+    
+}
+.reacoes li.animate-slide-in-right {
+    animation: deslizarParaDireira  0.5s ease forwards;
+}
+.button-reagir .fa-brands{
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'EmojiSymbols', 'Apple Color Emoji', 'Segoe UI', sans-serif;
+    font-size: 28px;
+}
+@keyframes deslizarParaDireira {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
     }
-  }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 @media screen and (min-width: 1025px){ 
    
     .post-texto{
         width: 600px;
+    }
+ }
+
+ @media screen and (min-width: 481px){
+    .post-texto{
+        width: 50vw;
+    }
+}
+ @media screen and (max-width:480px){ 
+    .post-texto{
+        width: 14rem;
+        margin: 1 auto 1.5rem auto;
+    }
+    .fotoUsuario{
+        width: 80px;
+        height: 80px;
+    }
+    .fotoUsuario,.nome-usuario{
+      margin-right: -1rem!important;
+    }
+    
+    .div-post:last-child{
+        margin-bottom: 3rem;
     }
  }

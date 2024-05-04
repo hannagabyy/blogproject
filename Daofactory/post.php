@@ -12,14 +12,45 @@ class Post {
         return $row; 
     }
 
-    public static function getPostByUsuarioId($usuarioId){
+    public static function getPostByUsuarioId($usuarioId, $privacidade=null){
         global $mysqli;
         
-        $sql_code = "SELECT * FROM post where usuarioId='$usuarioId' order by id DESC";
+        $condicao = "";
+        if(!is_null($privacidade)){
+            $condicao = " AND privacidade = '$privacidade'";
+        }
+
+        $sql_code = "SELECT * FROM post where usuarioId='$usuarioId'{$condicao} order by id DESC";
         $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
         $result = $sql_query->fetch_all(MYSQLI_ASSOC);
 
         return $result;
+    }
+
+    public static function getPostsDosAmigos($amigos_ids){
+        global $mysqli;
+
+        $sql_code = 
+            "SELECT post.comentario, post.data_criacao, post.id, usuarios.usuario, usuarios.foto, usuarios.id as usuario_id
+             FROM post 
+             INNER JOIN usuarios ON post.usuarioId = usuarios.id
+             WHERE post.privacidade='publico'
+             AND post.usuarioId IN (".implode(', ', $amigos_ids).")
+             ORDER BY post.data_criacao DESC";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $result = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $result;
+    }
+
+    public static function getAllPosts(){
+        global $mysqli;
+        
+        $sql_code = "SELECT * FROM post ";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código sql" . $mysqli->error);
+        $row = $sql_query->fetch_all(MYSQLI_ASSOC);
+
+        return $row; 
     }
 
     public static function deletePostById($id) {
@@ -31,12 +62,16 @@ class Post {
             $sql_code = "DELETE FROM post where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('i', $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
     }
@@ -52,18 +87,22 @@ class Post {
             $sql_code = "UPDATE post SET comentario=? where id=? ";
             $stmt = $mysqli->prepare($sql_code);
             $stmt->bind_param('si', $comentario, $id);
-            $stmt->execute();
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         }
        
     }
 
-    public static function insertPost($comentario, $usuarioId){
+    public static function insertPost($comentario, $usuarioId, $privacidade){
         global $mysqli;
 
         $comentario = $mysqli->real_escape_string($comentario);
@@ -71,15 +110,19 @@ class Post {
         $mysqli->begin_transaction();
         
         try{  
-            $sql_code = "INSERT INTO post(comentario, usuarioId) VALUES (?, ?)"; 
+            $sql_code = "INSERT INTO post(comentario, usuarioId, privacidade) VALUES (?, ?, ?)"; 
             $stmt = $mysqli->prepare($sql_code);
-            $stmt->bind_param('si', $comentario, $usuarioId);
-            $stmt->execute();
+            $stmt->bind_param('sis', $comentario, $usuarioId, $privacidade);
+            $resultado = $stmt->execute();
         
             $mysqli->commit();
 
+            return $resultado;
+
         }catch(mysqli_sql_exception $exception) {
             $mysqli->rollback();
+
+            return false;
     
         } 
     }

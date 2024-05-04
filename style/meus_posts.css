@@ -1,9 +1,32 @@
+.publicacaoUsuario{
+    color: #525252;
+}
 .icones-botoes{
     width: 20px;
 }
+.nome-usuario{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.nome-usuario,.fotoUsuario{
+    margin-right: 3rem !important;
+}
 @media screen and (min-width: 1025px){ 
    
-    .post-texto{
+    .post-texto, .ck.ck-reset.ck-editor.ck-rounded-corners{
         width: 600px;
     }
+ }
+ @media screen and (max-width:480px){
+   
+   #botao_salvar_edicao-post{
+    width: 6rem;
+    height: 3rem;
+    margin-right: 1rem;
+    font-size: 1.2em;
+   }
+   .nome-usuario,.fotoUsuario{
+    margin-right: 1rem !important;;
+   }
+    
  }

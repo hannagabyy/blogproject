@@ -1,0 +1,182 @@
+.div-inputs{
+    width: 300px;
+}
+.div-editar-meu-perfil{
+    width: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+.editar-foto-perfil{
+    cursor: pointer;
+}
+.fotoUsuario-perfil{
+    width: 10rem;
+    height: 10rem;
+}
+.fotoUsuario-perfil:hover{
+    cursor: pointer;
+}
+.form-label{
+    font-size: 1rem;
+}
+.label-amigos{
+    color: orange!important;
+}
+.input-editar{
+    width: 20rem;
+    text-wrap: nowrap!important;
+    margin: 0 4px;
+}
+.input-editar, .input-editar:focus{
+    background-color: var(--fundo-input);
+    border: none;
+    color: white!important;
+}
+.input-form__perfil{
+    text-align: start;
+    margin-top: 1rem;
+}
+.dados-amigo{
+    text-align: start;
+    padding-left: 4px;
+}
+.sobre-mim{
+    width: 44.5rem;
+    resize:none;
+    text-wrap:wrap!important;
+    margin-bottom: 1rem;
+}
+.editar-email{
+    width: 44.5rem;
+}
+.sobre-mim-amigo{
+    width: 30rem;
+}
+.rubberBand {
+    animation: rubberbandAnimacao 800ms alternate ease-out;
+}
+
+.titulo-principal-perfil{
+    display: flex;
+    justify-content: left;
+}
+
+.titulo-principal-perfil span {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid pink;
+    animation: 
+        animacao_digitacao 2s steps(30) forwards,
+        animacao_cursor 5s steps(30) forwards;
+}
+    
+  @keyframes rubberbandAnimacao {
+    0% {
+      transform: scaleX(1) scaleY(1);
+    }
+    30% {
+      transform: scaleX(1.25) scaleY(0.75);
+    }
+    40% {
+      transform: scaleX(0.75) scaleY(1.25);
+    }
+    50% {
+      transform: scaleX(1.15) scaleY(0.85);
+    }
+    65% {
+      transform: scaleX(0.95) scaleY(1.05);
+    }
+    75% {
+      transform: scaleX(1.05) scaleY(0.95);
+    }
+    90% {
+      transform: scaleX(1.05) scaleY(0.95);
+    }
+    100% {
+      transform: scaleX(1) scaleY(1);
+    }
+  }
+
+@media screen and (max-width:480px){
+    a:hover{
+        text-decoration: none;
+    }
+    .container-perfil{
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .input-form__grupos{
+        flex-direction: column;
+    }
+    .div-editar-meu-perfil{
+        width: 25rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left:-45px 
+    }
+    .editar-email,.sobre-mim{
+        width: 25rem;
+    }
+    .sobre-mim-amigo{
+        width: 23rem;
+        padding: 2px;
+    }
+    .sobre-mim{
+        height: 120px;
+    }
+    .input-form__perfil{
+        width: 15rem!important;
+        margin: 0.5rem auto;
+    }
+    .fotoUsuario-perfil{
+        width: 10rem;
+        height: 10rem;
+    }
+    .editar-foto-perfil{
+        margin-bottom: 1rem;
+    }
+    .sobre-mim,.editar-email{
+        width: 20rem!important;
+    }
+    .div-inputs{
+        justify-content: center;
+        align-items: center;
+        margin: 4px auto;
+    }
+    .btn-salvar-edicao{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-right: -76px 
+    }
+   
+    
+ }
+ @media screen and (max-width:1025px){
+    .div-editar-meu-perfil{
+        flex-direction: column;
+       
+    }
+    .editar-email,.sobre-mim{
+        width: 20rem!important;
+    }
+    
+ }
+
+ @keyframes animacao_digitacao {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes animacao_cursor {
+    from { border-right: 100% }
+    to { border-right: 0 }
+  }
+  

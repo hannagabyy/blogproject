@@ -1,10 +1,91 @@
-
-#formularioIndex{
-    max-width: 600px;
-    min-width: 400px;   
+.formulario-login {
+    background-color: var(--bg-form);
+}
+.form-control{
+    background-color: var(--fundo-input);
+    border: none;
+    color: white;
+}
+.form-control:focus{
+    border-bottom: 1px solid orange;
+}
+.input-group-text{
+    border: none;
+}
+input:focus{
+    background-color: var(--fundo-input)!important;
+    color: white!important;
+    outline: none!important;
+    box-shadow: none!important;
 }
 
-#usuario, #senha{
-    width: 250px;
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 40px #252A34 inset!important;
+    -webkit-text-fill-color:white !important;
+    
+}
+input{
+    outline: none;
 }
 
+#usuario, #senha,#email{
+    width: 15rem;
+}
+.btn-submit{
+    background-color: var(--laranja-escuro);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    width: 50%;
+    text-transform: uppercase;
+    transition: 0.4s ease-in-out;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+   
+}
+.btn-submit span{
+    position: relative;
+}
+.btn-submit::before{
+    content: '';
+    background-color: #2d3865;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: var(--eixoY);
+    left: var(--eixoX);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: width .7s,height .7s;
+}
+.btn-submit:hover{
+    color: white;
+}
+.btn-submit:hover::before{
+    width: 1000px;
+    height: 1000px;
+    
+}
+@media screen and (min-width: 1025px){ 
+   
+    .formulario-login{
+        width: 50%;
+        max-width: 600px;
+        min-width: 400px;   
+    }
+    
+ }
+@media screen and (max-width:480px){ 
+   
+    .formulario-login{
+        margin: 0.5rem;
+    }
+    #usuario, #senha,#email,.btn-submit{
+        width: 100%  !important;
+    }
+    
+    
+    
+ }

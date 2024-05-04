@@ -1,9 +1,33 @@
-
+.ck-content{
+    color: #525252!important;
+}
 .modal-header,.input__post,.modal-footer{
     border: none;
 } 
-.botao__postar{
-    background-color: var(--laranja);
+
+.privacidade-post{
+    margin-top: 1rem;
+    display: flex;
+    width: 10rem;
+    padding: 4px;
+    border-radius: 4px;
+    
+}
+select{
+    -webkit-appearance: none;
+}
+
+.editor[type="text"]{
+    width: 10ch;
+}
+.modal-content *{
+    background-color: var(--fundo-input)!important;
+    color: white!important;
+}
+
+.botao__postar,.postar-img{
+    background-color: var(--laranja)!important;
+    border: none;
 }
 .botao__postar:hover{
     background-color: var(--laranja-escuro);
@@ -12,3 +36,24 @@
     width: 20px;
     height: 20px;
 }
+#count-caracter{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+}
+.btn-close{
+    background-color:  rgba(246, 246, 246, 0)!important;
+}
+@media screen and (max-width:480px){
+    .botao__postar{
+        width: 8rem;
+        height: 3rem;
+        font-size: 1.5em;
+       
+    }   
+    .div-post .ck-editor{
+        width: 15rem!important;
+    }
+   
+    
+ }
