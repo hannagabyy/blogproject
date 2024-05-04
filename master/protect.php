@@ -4,11 +4,13 @@ if(!isset($_SESSION)){
 }
 
 if (!isset($_SESSION['id'])){
-    die('você precisa estar logado para acessar está pagina!<p><a href="./index.php">Entrar</a></p>');
+    header("HTTP/1.1 403 Forbidden");
+    die("<div style='display:flex; align-items:center; flex-direction:column;'>você precisa estar logado para acessar está pagina!<p><a href=\"./index.php\">Entrar</a></p></div>");
 }
 
 if(!$_SESSION['admin']){
-    die("Você não pode acessar essa aba com este usuário!.<p><a href=\"../public/home.php\">voltar</a></p>");
+    header("HTTP/1.1 403 Forbidden");
+    die("<div style='display:flex; align-items:center; flex-direction:column;'>Você não pode acessar essa aba com este usuário!.<p><a href=\"../public/home.php\">voltar</a></p></div>");
 }
 
 ?>
