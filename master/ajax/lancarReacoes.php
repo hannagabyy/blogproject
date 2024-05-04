@@ -30,6 +30,6 @@ for($i=1; $i <= $quantidade_desejada; $i++){
    
         echo "<div class='card-master'><span class='badge rounded-pill bg-danger'>$usuario_reagiu</span> reagiu com $reacao_ao_post a '$resumo_do_post' feito por <span class='badge rounded-pill bg-success'>$dono_do_post!</span></div>";
     }else{
-        echo "<div>Ocorreu um erro!</div>";
+        echo "<div class='card-master'>Ocorreu um erro!</div>";
     }
 }
