@@ -12,7 +12,9 @@
             <div class="d-flex flex-column fadeInLeft">
                 <div class="d-flex justify-content-center mx-auto rounded align-items-center div-post">
                     <div class="d-flex flex-column justify-content-center align-items-center  me-5">
-                        <img id="fotoUsuario" class="fotoUsuario" src="../<?= $post['foto'] ?>">
+                        <a href="./perfil.php?id=<?= $post['usuario_id'] ?>" target="_blank">
+                            <img id="fotoUsuario" class="fotoUsuario" src="../<?= $post['foto'] ?>">
+                        </a>
                         <p class="nome-usuario"><?= $post['usuario'] ?></p>
                     </div>
 
