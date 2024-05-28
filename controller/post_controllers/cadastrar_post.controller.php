@@ -23,7 +23,7 @@ if(isset($_POST['editor'], $_POST['privacidade'])) {
         $tagsPermitidas = '<p><ul><li><i><ol><h1><h2><h3><h4><strong>';
         $comentario = strip_tags($_POST['editor'], $tagsPermitidas);
         $comentario =  htmlspecialchars($comentario);
-        $tamanhoPermitido = 1000;
+        $tamanhoPermitido = 500;
 
         if(strlen($comentario) <= $tamanhoPermitido && strlen($comentario) > 1){
             $usuarioId = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
