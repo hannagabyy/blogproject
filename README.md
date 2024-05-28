@@ -7,19 +7,27 @@ Este projeto simula um blog.
 ## Funcionalidades e Demonstração
 # 🔨 Funcionalidades do projeto
 - `Cadastrar Usuário` : 
-https://github.com/hannagabyy/blogproject/assets/48922227/4474e10d-73b8-4c57-b77f-b095869b2291
 
-- `Login do Usuário` : 
-https://github.com/hannagabyy/blogproject/assets/48922227/4dfc56d8-7d0b-4d0a-a271-400947fe9c2e
+![criando_usuario-gif](https://github.com/hannagabyy/blogproject/assets/48922227/6f0b92b9-2a84-4748-a7eb-cd1d8579733c)
 
-- `Cadastrar um post` : 
-[novo-post.webm](https://github.com/hannagabyy/blogproject/assets/48922227/1204cc4f-410c-4a0b-aae2-7c04aab5e0ef)
+- `Login do Usuário` :
+  
+![login_usuario](https://github.com/hannagabyy/blogproject/assets/48922227/4ca3603e-fb44-4282-b1d2-0bc6d16aa2c9)
+
+- `Cadastrar um post` :
+  
+![novo-post-gif](https://github.com/hannagabyy/blogproject/assets/48922227/7d961b58-bc46-49e1-a5ce-205ec27b843f)
+
 
 - `Apagar e editar um post` : 
-[editar-apagar.webm](https://github.com/hannagabyy/blogproject/assets/48922227/7ad51e1b-c2f4-42dd-ad09-de783714194d)
+
+![editar-apagar-gif](https://github.com/hannagabyy/blogproject/assets/48922227/99756f4d-4011-4fa3-838c-3a2f8829ea32)
+
 
 - `Procurar e Adicionar amigos` : 
-[add-amigo.webm](https://github.com/hannagabyy/blogproject/assets/48922227/fc385e22-93cf-40cc-8835-3bc80df0f9a2)
+
+![add-amigo-gif](https://github.com/hannagabyy/blogproject/assets/48922227/3be46ae9-f920-4707-b1dd-f7777d92da7a)
+
 
 - `Modo master` : Um usuário admin pode : listar todos os usuarios, lançar posts e reações para fins de teste no site  acessando a url:
     - `http://localhost/Blog_project/master/`
