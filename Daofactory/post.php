@@ -59,8 +59,14 @@ class Post {
         $mysqli->begin_transaction();
         
         try{  
-            $sql_code = "DELETE FROM post where id=? ";
-            $stmt = $mysqli->prepare($sql_code);
+            $sql_code1 = "DELETE FROM post_reacao where post_id=? ";
+            $sql_code2 = "DELETE FROM post where id=? ";            
+
+            $stmt = $mysqli->prepare($sql_code1);
+            $stmt->bind_param('i', $id);
+            $resultado = $stmt->execute();
+
+            $stmt = $mysqli->prepare($sql_code2);
             $stmt->bind_param('i', $id);
             $resultado = $stmt->execute();
         
