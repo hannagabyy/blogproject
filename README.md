@@ -36,19 +36,17 @@ Este projeto simula um blog.
 ## Tecnologias Utilizadas
 **Front-end:** ``HTML5`` ``CSS3``  ``Javascript`` ``SweetAlert2`` ``Bootstrap``
 
-**Back-end:** ``PHP`` ``Mysql`` ``Ajax``
+**Back-end:** ``PHP`` ``Mysql`` 
 
 
 ## Rodando localmente
 ### Requisitos
 - É necessário ter um servidor Apache , no desenvolvimento do projeto foi utilizado xampp (https://www.apachefriends.org/pt_br/index.html)
-- O banco de dados SQL instalado
+- O banco de dados instalado
 
 Banco de dados
 
-```bash
-   Rodar o script de banco de dados script.sql no seu ambiente de desenvolvimento SQL
-```
+
 Clone o projeto
 
 ```bash
