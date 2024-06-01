@@ -1,6 +1,6 @@
 
 # BlogProject
-![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge)
+![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 Este projeto simula um blog com um sistema de cadastro de usuários, publicação de conteúdo e a capacidade de adicionar amigos. Além disso, inclui um modo de depuração para que o administrador do sistema possa realizar testes e monitorar o progresso da rede social.
 
