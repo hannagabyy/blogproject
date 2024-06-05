@@ -17,7 +17,7 @@ Em resumo, este projeto oferece uma experiência simulada de rede social, com re
 ![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 ## Indice
-- [Funcionalidades e Demonstração](#funcionalidades-e-demonstracao)
+- [Funcionalidades e Demonstração](#funcionalidades-e-demonstração)
 
 - [Modo Master](#modo-master)
 
