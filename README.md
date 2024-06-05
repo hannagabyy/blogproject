@@ -1,4 +1,3 @@
-
 # BlogProject
 ![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
@@ -19,11 +18,14 @@ Em resumo, este projeto oferece uma experiência simulada de rede social, com re
 
 
 ## Funcionalidades e Demonstração
-# 🔨 Funcionalidades do projeto
+### 🔨 Funcionalidades do projeto
 
 - `Cadastrar Usuário` : 
 
-  ![criando_usuario-gif](https://github.com/hannagabyy/blogproject/assets/48922227/6f0b92b9-2a84-4748-a7eb-cd1d8579733c)  
+  ![cadastre_se](https://github.com/hannagabyy/blogproject/assets/88946180/1b2f9ad8-3d09-4b7c-b186-3076c4b69771)
+
+  ![cadastre_se_mobile](https://github.com/hannagabyy/blogproject/assets/88946180/37b32c27-cc1b-4ddd-8c18-f5302b4f0553)
+
   Função padrão de cadastro de usuário
 
 - `Login do Usuário` :
@@ -36,6 +38,9 @@ Em resumo, este projeto oferece uma experiência simulada de rede social, com re
 ![novo-post-gif](https://github.com/hannagabyy/blogproject/assets/48922227/7d961b58-bc46-49e1-a5ce-205ec27b843f)  
 Funcionalidade na qual o usuário poderá adicionar um post de forma privada(visível apenas para o criador do post) ou pública(visível apenas para os amigos)
 
+A caixa de texto é feita a partir do CKEditor e após clicar no botão "postar" a postagem é sanitizada e validada pelo php para posteriormente ser salva no banco
+
+
 - `Apagar e editar um post` : 
 
 ![editar-apagar-gif](https://github.com/hannagabyy/blogproject/assets/48922227/99756f4d-4011-4fa3-838c-3a2f8829ea32)  
@@ -46,14 +51,40 @@ Funcionalidade na qual o usuário poderá apagar ou editar um post
 ![add-amigo-gif](https://github.com/hannagabyy/blogproject/assets/48922227/3be46ae9-f920-4707-b1dd-f7777d92da7a)  
 Funcionalidade na qual o usuário poderá adicionar amigos a sua conta ou desfazer amizades
 
-- `Modo master` :
-    - Um usuário admin pode listar todos os usuarios, lançar posts e reações para fins de teste no site acessando a url **`http://localhost/Blog_project/master/`**
-    - Inserir o seguinte login:  `usuário: admin , senha: admin123`
+Pesquisa feita utilizando resquisições assíncronas sem a nescessidade de recarregar a página, o mesmo acontece ao adicionar o amigo
+
+## Modo Master
+  - Usuado para testes e acompanhamento
+  - Um usuário admin pode listar todos os usuarios, lançar posts e reações para fins de teste no site
+  - Inserir o seguinte login:  `usuário: admin , senha: admin123`
+    
+ ### Como entrar
+![entrando_adm](https://github.com/hannagabyy/blogproject/assets/88946180/93ccd555-04cb-4ca5-966c-7c4af4b06e1d)
+acessando a url **`http://localhost/Blog_project/master/`**
+
+### Funcionalidades do Modo Master
+![listar_usuarios](https://github.com/hannagabyy/blogproject/assets/88946180/9a0b45b4-5749-434f-a84d-f074068cc381)
+listando usuários no sistema
+
+![listar_amizades](https://github.com/hannagabyy/blogproject/assets/88946180/1e622e72-aa95-489c-b7f8-6fa2873af075)
+listando amizades no sistema
+
+![lancar_publicacoes](https://github.com/hannagabyy/blogproject/assets/88946180/034147eb-35b4-4a13-a348-9faba54fa0d0)
+lançando publicações para povoar o blog e realizar testes
+      
+![lançar reações](https://github.com/hannagabyy/blogproject/assets/88946180/94c0a452-2c04-43ff-9b26-08667928de86)
+lançando reações em posts existentes para povoar o blog e realizar testes, caso os usuários não sejam amigos um erro irá aparecer
+
+![listar_todos_posts](https://github.com/hannagabyy/blogproject/assets/88946180/e1ba6589-1c92-443c-b72e-55ba2a4937f1)
+listando todos os posts lançados até o momento
+
 
 ## Tecnologias Utilizadas
-**Front-end:** ``HTML5`` ``CSS3``  ``Javascript`` ``SweetAlert2`` ``Bootstrap`` ``Ajax``
+**Front-end:** ``HTML5`` ``CSS3`` ``Javascript`` ``Bootstrap``
 
 **Back-end:** ``PHP`` ``MariaDB`` 
+
+**Outros:**  ``Ajax`` ``CKEditor 5`` ``SweetAlert2``
 
 
 ## Rodando localmente
