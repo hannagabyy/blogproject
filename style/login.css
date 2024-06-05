@@ -1,4 +1,4 @@
-.formulario-login {
+.formulario-login, .formulario-cadastro {
     background-color: var(--bg-form);
 }
 .form-control{
@@ -28,7 +28,7 @@ input{
     outline: none;
 }
 
-#usuario, #senha,#email{
+#usuario, #senha,#email, #nome{
     width: 15rem;
 }
 .btn-submit{
@@ -75,17 +75,21 @@ input{
         max-width: 600px;
         min-width: 400px;   
     }
+    .formulario-cadastro{
+        width: 75%;
+        max-width: 850px;
+        min-width: 400px;   
+    } 
     
  }
 @media screen and (max-width:480px){ 
    
-    .formulario-login{
+    .formulario-login, .formulario-cadastro{
         margin: 0.5rem;
     }
-    #usuario, #senha,#email,.btn-submit{
+    #usuario, #senha,#email, #nome,.btn-submit{
         width: 100%  !important;
     }
-    
     
     
  }
