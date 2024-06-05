@@ -1,5 +1,4 @@
 # BlogProject
-![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 Este projeto simula um blog com um sistema de cadastro de usuários, publicação de conteúdo e a capacidade de adicionar amigos. Além disso, inclui um modo de depuração para que o administrador do sistema possa realizar testes e monitorar o progresso da rede social.
 
@@ -15,7 +14,18 @@ Algumas das funcionalidades que verá em nosso projeto:
 
 Em resumo, este projeto oferece uma experiência simulada de rede social, com recursos de cadastro de usuários, publicação de conteúdo, interação entre membros e ferramentas de monitoramento e depuração para garantir seu bom funcionamento.
 
+![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
+## Indice
+- [Funcionalidades e Demonstração](funcionalidades-e-demonstracao)
+
+- [Modo Master](modo-master)
+
+- [Tecnologias Utilizadas](tecnologias-utilizadas)
+
+- [Rodando localmente](rodando-localmente)
+
+- [Autores](autores)
 
 ## Funcionalidades e Demonstração
 ### 🔨 Funcionalidades do projeto
