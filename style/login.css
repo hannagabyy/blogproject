@@ -76,9 +76,10 @@ input{
         min-width: 400px;   
     }
     .formulario-cadastro{
-        width: 75%;
-        max-width: 850px;
-        min-width: 400px;   
+        width: 60%;
+        max-width: 750px;
+        min-width: 400px; 
+        padding: -2px;
     } 
     
  }

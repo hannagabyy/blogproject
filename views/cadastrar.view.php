@@ -20,7 +20,7 @@
                 <div id="nome" class="mb-3 w-50 mx-auto">
                     <label for="inputNome" class="form-label text-light fs-6">Nome</label>
                     <div class="input-group">      
-                        <span class="input-group-text" style="background-color:#252A34;" id="basic-addon1"><i class="fa-solid fa-envelope" style="color: white;"></i></span>
+                        <span class="input-group-text" style="background-color:#252A34;" id="basic-addon1"><i class="fa-solid fa-user" style="color: white;"></i></span>
                         <input type="text" class="form-control" name="nome" required/>
                     </div>
                 </div>
