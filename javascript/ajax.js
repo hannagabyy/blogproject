@@ -115,7 +115,7 @@ if (formularioCadastrar){
 
         xhttp.open("POST", "../controller/ajax_controllers/cadastrar.controller.php");
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send(`email=${formulario['email']}&usuario=${formulario['usuario']}&senha=${formulario['senha']}`);
+        xhttp.send(`nome=${formulario['nome']}&email=${formulario['email']}&usuario=${formulario['usuario']}&senha=${formulario['senha']}`);
         
     });
 }

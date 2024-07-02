@@ -13,9 +13,18 @@
 
     <body>
         <main class="w-100 h-100 d-flex align-items-center justify-content-center"> 
-            <form id="formularioCadastrar" class="formulario-login p-4 rounded" method="post">
+            <form id="formularioCadastrar" class="formulario-cadastro p-4 rounded" method="post">
                 <h1 class="text-center mb-3 text-light">CADASTRE-SE</h1>
                 <p class="text-logo text-center">Blog</p> 
+                
+                <div id="nome" class="mb-3 w-50 mx-auto">
+                    <label for="inputNome" class="form-label text-light fs-6">Nome</label>
+                    <div class="input-group">      
+                        <span class="input-group-text" style="background-color:#252A34;" id="basic-addon1"><i class="fa-solid fa-user" style="color: white;"></i></span>
+                        <input type="text" class="form-control" name="nome" required/>
+                    </div>
+                </div>
+
                 <div id="email" class="mb-3 w-50 mx-auto">
                     <label for="inputEmail" class="form-label text-light fs-6">Email</label>
                     <div class="input-group">      

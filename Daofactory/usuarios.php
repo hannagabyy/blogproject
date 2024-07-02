@@ -97,17 +97,18 @@ class Usuarios {
        
     }
 
-    public static function insertUsuarios($email, $usuario, $senha){
+    public static function insertUsuarios($nome, $email, $usuario, $senha){
         global $mysqli;
 
+        $nome = $mysqli->real_escape_string($nome);
         $email = $mysqli->real_escape_string($email);
         $usuario = $mysqli->real_escape_string($usuario);
         $mysqli->begin_transaction();
         
         try{  
-            $sql_code = "INSERT INTO usuarios(email, usuario, senha) VALUES (?, ?, ?)"; 
+            $sql_code = "INSERT INTO usuarios(nome, email, usuario, senha) VALUES (?, ?, ?, ?)"; 
             $stmt = $mysqli->prepare($sql_code);
-            $stmt->bind_param('sss', $email, $usuario, $senha);
+            $stmt->bind_param('ssss', $nome, $email, $usuario, $senha);
             $resultado = $stmt->execute();
         
             $mysqli->commit();
