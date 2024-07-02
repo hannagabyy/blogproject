@@ -15,16 +15,16 @@
             
             <div class="input-form__perfil">
                 <label for="nome" class="form-label text-light">Nome</label>
-                <input type="text" class="form-control input-editar" name="nome" value="<?= $usuario['nome']?>">
+                <input type="text" class="form-control input-editar" name="nome" value="<?= $usuario['nome']?>" required>
             </div>
 
             <div class="input-form__perfil">
                 <label for="usuario" class="form-label text-light">Usuário</label>
-                <input type="text" class="form-control input-editar" name="usuario" value="<?= $usuario['usuario'] ?>">
+                <input type="text" class="form-control input-editar" name="usuario" value="<?= $usuario['usuario'] ?>" required>
             </div>
             <div class="input-form__perfil">
                 <label for="email" class="form-label text-light">Email</label>
-                <input type="email" class="form-control input-editar editar-email" name="email" value="<?= $usuario['email'] ?>">
+                <input type="email" class="form-control input-editar editar-email" name="email" value="<?= $usuario['email'] ?>" required>
             </div>
 
             <div class="input-form__perfil">

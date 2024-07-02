@@ -11,7 +11,7 @@ $fotoPerfil = (isset($_FILES['fotoPerfil']))? $_FILES['fotoPerfil'] : null;
 /* atualização */ 
 $resultado = [
     'sucesso'=> false,
-    'msg' => 'Algo deu errado, tente novamente!'
+    'msg' => 'Algo deu errado, verifique sua alteração tente novamente!'
 ];
 
 if($_POST){
@@ -38,7 +38,7 @@ if($_POST){
     foreach($camposEditaveis as $campo){
         if($campo != 'senha'){
             $novoValor = filter_input(INPUT_POST, $campo, $filtroPorTipo[$campo]);
-            ($novoValor != $usuario[$campo]) ? $alteracoes[$campo] = $novoValor : FALSE;
+            ($novoValor != $usuario[$campo] && !empty($novoValor)) ? $alteracoes[$campo] = $novoValor : FALSE;
         }
         else{
             $novaSenha = filter_input(INPUT_POST, 'senha', $filtroPorTipo['senha']);
@@ -48,7 +48,7 @@ if($_POST){
     }
 
     //atualização da foto de perfil
-    if(!is_null($fotoPerfil) && !empty($fotoPerfil)){
+    if(isset($fotoPerfil) && ($fotoPerfil['size'] > 0)){
         $resultadoImg = atualiza_foto_perfil($fotoPerfil);
         
         if(!is_null($resultadoImg['erro'])){
