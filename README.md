@@ -14,7 +14,7 @@ Algumas das funcionalidades que verá em nosso projeto:
 
 Em resumo, este projeto oferece uma experiência simulada de rede social, com recursos de cadastro de usuários, publicação de conteúdo, interação entre membros e ferramentas de monitoramento e depuração para garantir seu bom funcionamento.
 
-![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20EM%20FINALIZADO&color=GREEN&style=for-the-badge)
+![Badge concluido](http://img.shields.io/static/v1?label=STATUS&message=%20FINALIZADO&color=GREEN&style=for-the-badge)
 
 ## Indice
 - [Funcionalidades e Demonstração](#funcionalidades-e-demonstração)
